@@ -10,9 +10,9 @@
   --navy:       #0a1628;
   --navy-mid:   #112040;
   --white:      #fafaf8;
-  --gold:       #c9943a;
-  --gold-dark:  #a87828;
-  --gold-light: #e8b86d;
+  --gold:       #b8963e;
+  --gold-dark:  #9a7830;
+  --gold-light: #d4a855;
   --text:       #1e2a3a;
   --text-light: #5a6a7a;
   --bg-alt:     #f3f2ef;
@@ -134,7 +134,7 @@ h1, h2, h3, h4 {
   color: var(--navy);
 }
 
-h1 { font-size: clamp(1.9rem, 5vw, 3.25rem); font-weight: 800; }
+h1 { font-size: clamp(2.1rem, 5.5vw, 3.75rem); font-weight: 800; }
 h2 { font-size: clamp(1.5rem, 3.5vw, 2.4rem); font-weight: 700; margin-bottom: 0.5rem; }
 h3 { font-size: clamp(1.1rem, 2.5vw, 1.35rem); font-weight: 700; margin-bottom: 0.4rem; }
 
@@ -254,25 +254,48 @@ header.scrolled {
 /* Logo */
 .logo {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+}
+
+.logo-mark {
+  width: 30px;
+  height: 30px;
+  color: var(--gold);
+  flex-shrink: 0;
+  opacity: 0.92;
+}
+
+.logo-mark svg {
+  width: 100%;
+  height: 100%;
+}
+
+.logo-text {
+  display: flex;
   flex-direction: column;
   gap: 0.1rem;
-  text-decoration: none;
 }
 
 .logo-name {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   color: var(--white);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   line-height: 1;
+  text-transform: uppercase;
 }
 
 .logo-tagline {
-  font-size: 0.68rem;
-  color: var(--gold-light);
-  letter-spacing: 0.06em;
+  font-size: 0.63rem;
+  color: rgba(212, 168, 85, 0.80);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  font-family: var(--font-body);
+  font-weight: 500;
 }
 
 /* Nav links (desktop hidden on mobile, shown via hamburger) */
@@ -373,13 +396,25 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
 
   .nav-links a {
     padding: 0.4rem 0.9rem;
-    border-bottom: none;
+    border-bottom: 2px solid transparent;
     font-size: 0.875rem;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .nav-links a:hover {
+    color: var(--gold);
+    border-bottom-color: transparent;
+  }
+
+  .nav-links a.nav-active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
   }
 
   .nav-links a.nav-cta {
     margin-top: 0;
     padding: 0.5rem 1.1rem;
+    border-bottom: none;
   }
 }
 
@@ -392,57 +427,77 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
+  text-align: center;
 }
 
-/* Background image (replace URL with real facility photo before launch) */
+/* Background image — replace with real facility photo before launch */
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1600&auto=format&fit=crop&q=60');
+  background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&auto=format&fit=crop&q=65');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* Dark overlay for text legibility */
+/* Multi-layer dark overlay for depth and text legibility */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(10, 22, 40, 0.88) 0%,
-    rgba(10, 22, 40, 0.65) 100%
+  background: radial-gradient(
+    ellipse at center,
+    rgba(10, 22, 40, 0.60) 0%,
+    rgba(10, 22, 40, 0.88) 100%
   );
+}
+
+/* Subtle grain texture — adds depth, feels premium rather than flat */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  pointer-events: none;
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   padding-block: 8rem 4rem;
-  max-width: 760px;
+  width: 100%;
+  max-width: 860px;
+}
+
+/* Thin gold decorative rule above the H1 — editorial weight */
+.hero-eyebrow {
+  width: 52px;
+  height: 2px;
+  background-color: var(--gold);
+  border-radius: 1px;
+  margin: 0 auto 1.75rem;
 }
 
 .hero-content h1 {
   color: var(--white);
-  margin-bottom: 1rem;
-}
-
-/* Gold accent bar below H1 */
-.hero-accent-bar {
-  width: 72px;
-  height: 4px;
-  background-color: var(--gold);
-  border-radius: 2px;
-  margin-bottom: 1.5rem;
+  font-size: clamp(2.4rem, 7vw, 4.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.75rem;
 }
 
 .hero-sub {
-  color: rgba(250, 250, 248, 0.85);
+  color: rgba(250, 250, 248, 0.82);
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   max-width: 560px;
-  margin-bottom: 2.25rem;
-  line-height: 1.7;
+  margin-inline: auto;
+  margin-bottom: 2.5rem;
+  line-height: 1.75;
 }
 
 .hero-ctas {
@@ -450,6 +505,83 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
   flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
+  justify-content: center;
+}
+
+
+/* ------------------------------------------------------------
+   TRUST BAR
+   ------------------------------------------------------------ */
+.trust-bar {
+  background-color: #0d1b30;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.trust-bar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.2rem 1.5rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.trust-item:nth-child(2),
+.trust-item:nth-child(4) {
+  border-right: none;
+}
+
+.trust-item:nth-child(3),
+.trust-item:nth-child(4) {
+  border-bottom: none;
+}
+
+.trust-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.trust-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.trust-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--white);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .trust-bar-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  .trust-item {
+    justify-content: center;
+    border-bottom: none;
+  }
+
+  .trust-item:nth-child(2) {
+    border-right: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .trust-item:last-child {
+    border-right: none;
+  }
 }
 
 
