@@ -1,0 +1,915 @@
+/* ============================================================
+   Boats Galore — style.css
+   Mobile-first. No frameworks.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   CSS Custom Properties
+   ------------------------------------------------------------ */
+:root {
+  --navy:       #0a1628;
+  --navy-mid:   #112040;
+  --white:      #fafaf8;
+  --gold:       #c9943a;
+  --gold-dark:  #a87828;
+  --gold-light: #e8b86d;
+  --text:       #1e2a3a;
+  --text-light: #5a6a7a;
+  --bg-alt:     #f3f2ef;
+  --border:     #ddd9d0;
+
+  --font-display: 'Raleway', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  --radius:    6px;
+  --radius-lg: 12px;
+  --shadow:    0 2px 12px rgba(10, 22, 40, 0.10);
+  --shadow-md: 0 4px 24px rgba(10, 22, 40, 0.14);
+
+  --max-width: 1180px;
+  --section-pad: 4rem 1.25rem;
+}
+
+
+/* ------------------------------------------------------------
+   Reset / Base
+   ------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text);
+  background-color: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--gold-dark);
+}
+
+ul {
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Remove default list styles on role=list (accessibility pattern) */
+[role="list"] {
+  list-style: none;
+}
+
+
+/* ------------------------------------------------------------
+   Layout Utilities
+   ------------------------------------------------------------ */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.section {
+  padding: var(--section-pad);
+}
+
+.section-alt {
+  background-color: var(--bg-alt);
+}
+
+.section-navy {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.section-sub {
+  color: var(--text-light);
+  font-size: 1.05rem;
+  max-width: 640px;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-sub-light {
+  color: rgba(250, 250, 248, 0.72);
+}
+
+.hide-mobile {
+  display: none;
+}
+
+
+/* ------------------------------------------------------------
+   Typography
+   ------------------------------------------------------------ */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+  color: var(--navy);
+}
+
+h1 { font-size: clamp(1.9rem, 5vw, 3.25rem); font-weight: 800; }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2.4rem); font-weight: 700; margin-bottom: 0.5rem; }
+h3 { font-size: clamp(1.1rem, 2.5vw, 1.35rem); font-weight: 700; margin-bottom: 0.4rem; }
+
+.section-navy h2,
+.section-navy h3 {
+  color: var(--white);
+}
+
+
+/* ------------------------------------------------------------
+   Buttons
+   ------------------------------------------------------------ */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: var(--radius);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, transform 0.15s, box-shadow 0.2s;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Primary: gold fill */
+.btn-primary {
+  background-color: var(--gold);
+  color: var(--navy);
+}
+.btn-primary:hover {
+  background-color: var(--gold-dark);
+  color: var(--navy);
+}
+
+/* Outline: white border for dark backgrounds */
+.btn-outline {
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255,255,255,0.65);
+}
+.btn-outline:hover {
+  background-color: rgba(255,255,255,0.1);
+  border-color: var(--white);
+  color: var(--white);
+}
+
+/* Secondary: navy fill for light backgrounds */
+.btn-secondary {
+  background-color: var(--navy);
+  color: var(--white);
+}
+.btn-secondary:hover {
+  background-color: var(--navy-mid);
+  color: var(--white);
+}
+
+/* Gold for dark-background sections */
+.btn-gold {
+  background-color: var(--gold);
+  color: var(--navy);
+}
+.btn-gold:hover {
+  background-color: var(--gold-dark);
+  color: var(--navy);
+}
+
+/* Navy for CTA banner (gold background) */
+.btn-navy {
+  background-color: var(--navy);
+  color: var(--white);
+}
+.btn-navy:hover {
+  background-color: var(--navy-mid);
+  color: var(--white);
+}
+
+
+/* ------------------------------------------------------------
+   HEADER
+   ------------------------------------------------------------ */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: transparent;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Opaque header once user scrolls (class added by script.js) */
+header.scrolled {
+  background-color: var(--navy);
+  box-shadow: 0 2px 16px rgba(10, 22, 40, 0.35);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding: 1rem 1.25rem;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  text-decoration: none;
+}
+
+.logo-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--white);
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.logo-tagline {
+  font-size: 0.68rem;
+  color: var(--gold-light);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Nav links (desktop hidden on mobile, shown via hamburger) */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--navy);
+  padding: 1rem 1.25rem 1.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+/* Open state (class toggled by script.js) */
+header.nav-open .nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.nav-active {
+  color: var(--gold);
+}
+
+/* CTA link in nav */
+.nav-links a.nav-cta {
+  margin-top: 0.75rem;
+  background-color: var(--gold);
+  color: var(--navy);
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  border-bottom: none;
+  text-align: center;
+  display: inline-block;
+}
+.nav-links a.nav-cta:hover {
+  background-color: var(--gold-dark);
+  color: var(--navy);
+}
+
+/* Hamburger button */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: var(--radius);
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: var(--white);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.2s;
+}
+
+/* Hamburger → X when open */
+header.nav-open .hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+header.nav-open .hamburger span:nth-child(2) { opacity: 0; }
+header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Desktop nav */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+    position: static;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .nav-links a {
+    padding: 0.4rem 0.9rem;
+    border-bottom: none;
+    font-size: 0.875rem;
+  }
+
+  .nav-links a.nav-cta {
+    margin-top: 0;
+    padding: 0.5rem 1.1rem;
+  }
+}
+
+
+/* ------------------------------------------------------------
+   HERO
+   ------------------------------------------------------------ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Background image (replace URL with real facility photo before launch) */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1600&auto=format&fit=crop&q=60');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Dark overlay for text legibility */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 22, 40, 0.88) 0%,
+    rgba(10, 22, 40, 0.65) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding-block: 8rem 4rem;
+  max-width: 760px;
+}
+
+.hero-content h1 {
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+/* Gold accent bar below H1 */
+.hero-accent-bar {
+  width: 72px;
+  height: 4px;
+  background-color: var(--gold);
+  border-radius: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-sub {
+  color: rgba(250, 250, 248, 0.85);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  max-width: 560px;
+  margin-bottom: 2.25rem;
+  line-height: 1.7;
+}
+
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+
+/* ------------------------------------------------------------
+   INTRO / ABOUT SNIPPET
+   ------------------------------------------------------------ */
+.intro-grid {
+  display: grid;
+  gap: 3rem;
+}
+
+.intro-text h2 {
+  margin-bottom: 1rem;
+}
+
+.intro-text p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.intro-text .btn {
+  margin-top: 0.5rem;
+}
+
+.trust-stats {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.trust-stat {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 0.25rem;
+}
+
+.stat-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+
+.trust-stat strong {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--navy);
+  display: block;
+}
+
+.trust-stat p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+@media (min-width: 768px) {
+  .intro-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .trust-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  .trust-stats {
+    gap: 2rem;
+  }
+
+  .hide-mobile {
+    display: initial;
+  }
+}
+
+
+/* ------------------------------------------------------------
+   FEATURES — 4-card grid
+   ------------------------------------------------------------ */
+.features-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+.feature-card {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  transition: box-shadow 0.25s, transform 0.2s;
+}
+
+.feature-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.feature-icon {
+  width: 44px;
+  height: 44px;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.feature-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.feature-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  font-size: 0.93rem;
+  color: var(--text-light);
+}
+
+@media (min-width: 600px) {
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+
+/* ------------------------------------------------------------
+   VEHICLE TYPES — image grid
+   ------------------------------------------------------------ */
+.vehicles .section-sub {
+  margin-bottom: 2rem;
+}
+
+.vehicles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.vehicle-tile {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.vehicle-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.vehicle-tile:hover img {
+  transform: scale(1.04);
+}
+
+.vehicle-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(10,22,40,0.82) 0%, transparent 100%);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1.5rem 1rem 0.85rem;
+}
+
+.vehicles-note {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.vehicles-note em {
+  color: var(--text);
+}
+
+.vehicles-note a {
+  margin-left: 0.25rem;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .vehicles-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ------------------------------------------------------------
+   PRICING TEASER
+   ------------------------------------------------------------ */
+.pricing.section-navy {
+  padding: var(--section-pad);
+  text-align: center;
+}
+
+.pricing-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.pricing-card {
+  background-color: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  position: relative;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.pricing-card:hover {
+  background-color: rgba(255,255,255,0.11);
+  border-color: rgba(201,148,58,0.45);
+}
+
+.pricing-card-featured {
+  border-color: var(--gold);
+  background-color: rgba(201,148,58,0.10);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--gold);
+  color: var(--navy);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.85rem;
+  border-radius: 99px;
+  white-space: nowrap;
+}
+
+.pricing-card h3 {
+  color: var(--white);
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.pricing-vehicles {
+  color: rgba(250,250,248,0.65);
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.pricing-rate {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin-bottom: 0.2rem;
+}
+
+.pricing-season {
+  font-size: 0.9rem;
+  color: rgba(250,250,248,0.6);
+}
+
+.pricing-note {
+  color: rgba(250,250,248,0.65);
+  font-size: 0.9rem;
+  max-width: 520px;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ------------------------------------------------------------
+   TESTIMONIALS
+   ------------------------------------------------------------ */
+.testimonials {
+  background-color: var(--white);
+}
+
+.testimonials-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.testimonial-card {
+  background-color: var(--bg-alt);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+}
+
+.testimonial-card blockquote {
+  margin: 0;
+}
+
+.testimonial-card blockquote p {
+  font-size: 1rem;
+  color: var(--text);
+  font-style: italic;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.testimonial-card blockquote footer {
+  /* reset browser default blockquote footer styles */
+  background: none;
+  padding: 0;
+}
+
+.testimonial-card cite {
+  font-style: normal;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--navy);
+}
+
+.cite-vehicle {
+  color: var(--text-light);
+  font-weight: 400;
+  font-family: var(--font-body);
+}
+
+@media (min-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* ------------------------------------------------------------
+   FINAL CTA BANNER
+   ------------------------------------------------------------ */
+.cta-banner {
+  background-color: var(--gold);
+  padding: 4rem 1.25rem;
+  text-align: center;
+}
+
+.cta-banner-inner h2 {
+  color: var(--navy);
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.4rem, 3.5vw, 2.25rem);
+}
+
+.cta-banner-inner p {
+  color: rgba(10, 22, 40, 0.75);
+  max-width: 560px;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+
+/* ------------------------------------------------------------
+   FOOTER
+   ------------------------------------------------------------ */
+footer {
+  background-color: var(--navy);
+  color: rgba(250,250,248,0.75);
+  font-size: 0.9rem;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 2.5rem;
+  padding-block: 3.5rem;
+}
+
+.footer-logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.footer-col address,
+.footer-col p {
+  margin-bottom: 0.4rem;
+  line-height: 1.6;
+}
+
+.footer-col a {
+  color: rgba(250,250,248,0.75);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover {
+  color: var(--gold);
+}
+
+.footer-col-heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.footer-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-col ul a {
+  transition: color 0.2s, padding-left 0.2s;
+}
+
+.footer-col ul a:hover {
+  color: var(--gold);
+  padding-left: 4px;
+}
+
+.footer-col strong {
+  color: var(--white);
+}
+
+.footer-location {
+  margin-top: 0.75rem;
+  font-style: italic;
+  color: rgba(250,250,248,0.5);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-block: 1.25rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(250,250,248,0.4);
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  .footer-grid {
+    grid-template-columns: 1.4fr 1fr 1.2fr;
+  }
+}
