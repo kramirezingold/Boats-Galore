@@ -721,32 +721,51 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
 
 
 /* ------------------------------------------------------------
-   FEATURES — 4-card grid
+   FEATURES — 4-item premium layout
    ------------------------------------------------------------ */
+.features {
+  background-color: #f5f0e8;
+}
+
+.features-eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.85rem;
+}
+
+.features .section-sub {
+  color: var(--text-light);
+}
+
 .features-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 1.25rem;
   grid-template-columns: 1fr;
 }
 
 .feature-card {
-  background-color: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 1.75rem 1.5rem;
-  transition: box-shadow 0.25s, transform 0.2s;
+  background-color: #ede8dc;
+  border: none;
+  border-top: 3px solid var(--gold);
+  border-radius: 0 0 var(--radius) var(--radius);
+  padding: 2rem 1.75rem;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
 .feature-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
+  background-color: #e5dfd0;
+  transform: translateY(-2px);
 }
 
 .feature-icon {
-  width: 44px;
-  height: 44px;
-  color: var(--gold);
-  margin-bottom: 1rem;
+  width: 40px;
+  height: 40px;
+  color: var(--navy);
+  margin-bottom: 1.25rem;
 }
 
 .feature-icon svg {
@@ -755,6 +774,7 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
 }
 
 .feature-card h3 {
+  color: var(--navy);
   margin-bottom: 0.5rem;
 }
 
