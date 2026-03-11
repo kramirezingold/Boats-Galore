@@ -124,6 +124,10 @@ address {
   display: none;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 
 /* ------------------------------------------------------------
    Typography
@@ -700,7 +704,7 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
 @media (min-width: 768px) {
   .intro-grid {
     grid-template-columns: 1fr 1fr;
-    align-items: start;
+    align-items: center;
     gap: 5rem;
   }
 }
