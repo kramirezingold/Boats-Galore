@@ -593,19 +593,49 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
 
 
 /* ------------------------------------------------------------
-   INTRO / ABOUT SNIPPET
+   INTRO / ABOUT SNIPPET — premium dark section
    ------------------------------------------------------------ */
+.intro {
+  background-color: var(--navy);
+  /* Subtle dot-grid texture for depth */
+  background-image: radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
 .intro-grid {
   display: grid;
   gap: 3rem;
 }
 
+/* Gold uppercase label above headline */
+.intro-eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.85rem;
+}
+
 .intro-text h2 {
-  margin-bottom: 1rem;
+  color: var(--white);
+  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+/* Thin gold rule between headline and body copy */
+.intro-divider {
+  width: 52px;
+  height: 2px;
+  background-color: var(--gold);
+  border-radius: 1px;
+  margin: 1.25rem 0 1.5rem;
 }
 
 .intro-text p {
-  color: var(--text-light);
+  color: rgba(250, 250, 248, 0.70);
   margin-bottom: 1rem;
 }
 
@@ -613,49 +643,71 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
   margin-top: 0.5rem;
 }
 
+/* Trust stats — gold left-border editorial layout */
 .trust-stats {
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .trust-stat {
-  display: grid;
-  grid-template-rows: auto auto auto;
-  gap: 0.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--gold);
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  transition: background-color 0.2s;
+}
+
+.trust-stat:hover {
+  background-color: rgba(255, 255, 255, 0.07);
 }
 
 .stat-icon {
-  font-size: 1.75rem;
-  line-height: 1;
-  margin-bottom: 0.35rem;
+  width: 28px;
+  height: 28px;
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.stat-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.stat-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
 .trust-stat strong {
   font-family: var(--font-display);
   font-size: 1rem;
-  color: var(--navy);
+  font-weight: 700;
+  color: var(--white);
   display: block;
 }
 
 .trust-stat p {
   font-size: 0.9rem;
-  color: var(--text-light);
+  color: rgba(250, 250, 248, 0.62);
+  margin: 0;
 }
 
 @media (min-width: 768px) {
   .intro-grid {
     grid-template-columns: 1fr 1fr;
     align-items: start;
-  }
-
-  .trust-stats {
-    grid-template-columns: 1fr;
+    gap: 5rem;
   }
 }
 
 @media (min-width: 1100px) {
-  .trust-stats {
-    gap: 2rem;
+  .intro-grid {
+    gap: 6rem;
   }
 
   .hide-mobile {
