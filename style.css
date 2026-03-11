@@ -474,21 +474,21 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
   max-width: 860px;
 }
 
-/* Thin gold decorative rule above the H1 — editorial weight */
-.hero-eyebrow {
-  width: 52px;
-  height: 2px;
-  background-color: var(--gold);
-  border-radius: 1px;
-  margin: 0 auto 1.75rem;
-}
-
 .hero-content h1 {
   color: var(--white);
   font-size: clamp(2.4rem, 7vw, 4.75rem);
   line-height: 1.1;
   letter-spacing: -0.01em;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Thin gold decorative rule between H1 and subheadline */
+.hero-eyebrow {
+  width: 52px;
+  height: 2px;
+  background-color: var(--gold);
+  border-radius: 1px;
+  margin: 0 auto 1.5rem;
 }
 
 .hero-sub {
