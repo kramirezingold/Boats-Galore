@@ -739,6 +739,8 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
 
 .features .section-sub {
   color: var(--text-light);
+  max-width: none;
+  white-space: nowrap;
 }
 
 .features-grid {
