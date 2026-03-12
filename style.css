@@ -1062,13 +1062,14 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
 .offers h2 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  margin-bottom: 0.75rem;
+  margin-top: 16px;
+  margin-bottom: 0;
 }
 
 .offers .section-divider {
   margin-inline: auto;
   margin-top: 0;
-  margin-bottom: 0.75rem;
+  margin-bottom: 16px;
 }
 
 .offers .section-sub {
@@ -1082,7 +1083,7 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin: 1.25rem 0 1.5rem;
+  margin: 1.25rem 0 48px;
   flex-wrap: wrap;
 }
 
