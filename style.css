@@ -1051,14 +1051,12 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
   background-color: var(--navy);
   background-image: radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
   background-size: 24px 24px;
-  padding: 4.5rem 1.25rem;
+  padding: 3rem 1.25rem;
   text-align: center;
 }
 
-.offers .section-divider {
-  margin-inline: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.offers .eyebrow {
+  margin-bottom: 0.5rem;
 }
 
 .offers h2 {
@@ -1067,9 +1065,15 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
   margin-bottom: 0;
 }
 
-.offers .section-sub {
+.offers .section-divider {
   margin-inline: auto;
   margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.offers .section-sub {
+  margin-inline: auto;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -1078,7 +1082,7 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin: 1.75rem 0 2rem;
+  margin: 1.25rem 0 1.5rem;
   flex-wrap: wrap;
 }
 
