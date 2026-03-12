@@ -280,94 +280,125 @@
 
 
     <!-- ============================================================
-         4. VEHICLE TYPES — visual grid
+         4. WHAT WE STORE — Carousel + Accordion
          ============================================================ -->
-    <section class="vehicles section" aria-labelledby="vehicles-heading">
-      <div class="container">
-        <h2 id="vehicles-heading">What We Store</h2>
-        <p class="section-sub">From pontoons to jet skis, we have room for your recreational vehicle — indoors, all year.</p>
+    <section class="vehicles" aria-labelledby="vehicles-heading">
+      <div class="vehicles-layout">
 
-        <ul class="vehicles-grid" role="list">
+        <!-- Left column: Photo Carousel -->
+        <div class="carousel" role="region" aria-label="Vehicle storage photo gallery">
+          <div class="carousel-track">
 
-          <li class="vehicle-tile">
-            <!-- Unsplash placeholder: boat storage interior -->
-            <img
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&auto=format&fit=crop&q=70"
-              alt="Boats stored inside a large indoor storage facility in Michigan"
-              loading="lazy"
-              width="600"
-              height="400"
-            />
-            <span class="vehicle-label">Boats</span>
-          </li>
+            <div class="carousel-slide active">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&auto=format&fit=crop&q=75" alt="Boats stored inside a large indoor storage facility" loading="lazy" />
+            </div>
 
-          <li class="vehicle-tile">
-            <!-- Unsplash placeholder: RV parked in storage -->
-            <img
-              src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&auto=format&fit=crop&q=70"
-              alt="RV motorhome in indoor vehicle storage"
-              loading="lazy"
-              width="600"
-              height="400"
-            />
-            <span class="vehicle-label">RVs</span>
-          </li>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1200&auto=format&fit=crop&q=75" alt="RV motorhome in secure indoor vehicle storage" loading="lazy" />
+            </div>
 
-          <li class="vehicle-tile">
-            <!-- Unsplash placeholder: snowmobile -->
-            <img
-              src="https://images.unsplash.com/photo-1548263594-a71ea65a8598?w=600&auto=format&fit=crop&q=70"
-              alt="Snowmobile stored in a dry, indoor facility"
-              loading="lazy"
-              width="600"
-              height="400"
-            />
-            <span class="vehicle-label">Snowmobiles</span>
-          </li>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1548263594-a71ea65a8598?w=1200&auto=format&fit=crop&q=75" alt="Snowmobile stored in a dry, protected indoor facility" loading="lazy" />
+            </div>
 
-          <li class="vehicle-tile">
-            <!-- Unsplash placeholder: ATV -->
-            <img
-              src="https://images.unsplash.com/photo-1533591380348-14193f1de18f?w=600&auto=format&fit=crop&q=70"
-              alt="ATV four-wheeler ready for storage"
-              loading="lazy"
-              width="600"
-              height="400"
-            />
-            <span class="vehicle-label">ATVs</span>
-          </li>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1533591380348-14193f1de18f?w=1200&auto=format&fit=crop&q=75" alt="ATV four-wheeler ready for indoor storage" loading="lazy" />
+            </div>
 
-          <li class="vehicle-tile">
-            <!-- Unsplash placeholder: jet ski / personal watercraft -->
-            <img
-              src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=600&auto=format&fit=crop&q=70"
-              alt="Jet ski personal watercraft in storage"
-              loading="lazy"
-              width="600"
-              height="400"
-            />
-            <span class="vehicle-label">Jet Skis</span>
-          </li>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1200&auto=format&fit=crop&q=75" alt="Jet ski personal watercraft in storage" loading="lazy" />
+            </div>
 
-          <li class="vehicle-tile">
-            <!-- Unsplash placeholder: boat trailer -->
-            <img
-              src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=600&auto=format&fit=crop&q=70"
-              alt="Boat trailer stored in a secure indoor facility"
-              loading="lazy"
-              width="600"
-              height="400"
-            />
-            <span class="vehicle-label">Trailers</span>
-          </li>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=1200&auto=format&fit=crop&q=75" alt="Boat trailer stored securely indoors" loading="lazy" />
+            </div>
 
-        </ul>
+          </div>
 
-        <p class="vehicles-note">
-          We store boats, RVs, snowmobiles, ATVs, jet skis, trailers, and similar recreational vehicles.
-          <em>We do not store cars, fifth wheels, or items easily damaged by unheated indoor storage.</em>
-          <a href="services.html">See full list →</a>
-        </p>
+          <!-- Dot indicators -->
+          <div class="carousel-dots" aria-hidden="true">
+            <button class="dot active"></button>
+            <button class="dot"></button>
+            <button class="dot"></button>
+            <button class="dot"></button>
+            <button class="dot"></button>
+            <button class="dot"></button>
+          </div>
+        </div>
+
+        <!-- Right column: Accordion -->
+        <div class="vehicles-content">
+          <p class="vehicles-eyebrow">What We Store</p>
+          <h2 id="vehicles-heading">Storage for Every Vehicle You Own</h2>
+          <p class="vehicles-sub">From pontoons to snowmobiles, every vehicle stored indoors and protected year round.</p>
+
+          <div class="accordion">
+
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false">
+                <span>Boats</span>
+                <span class="accordion-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion-body">
+                <p>Pontoons, speed boats, fishing boats, sailboats, bass boats</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false">
+                <span>RVs</span>
+                <span class="accordion-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion-body">
+                <p>Class A motorhomes, Class C motorhomes, travel trailers, campers</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false">
+                <span>Snowmobiles</span>
+                <span class="accordion-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion-body">
+                <p>All makes and models, single and multi-sled storage available</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false">
+                <span>ATVs &amp; UTVs</span>
+                <span class="accordion-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion-body">
+                <p>Four-wheelers, side-by-sides, dirt bikes, golf carts</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false">
+                <span>Jet Skis</span>
+                <span class="accordion-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion-body">
+                <p>Personal watercraft of all sizes, with or without trailer</p>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-trigger" aria-expanded="false">
+                <span>Trailers</span>
+                <span class="accordion-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="accordion-body">
+                <p>Boat trailers, utility trailers, equipment trailers</p>
+              </div>
+            </div>
+
+          </div>
+
+          <p class="vehicles-disclaimer"><em>We do not store cars, fifth wheels, or items sensitive to unheated storage.</em></p>
+        </div>
+
       </div>
     </section>
 

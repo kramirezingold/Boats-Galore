@@ -799,68 +799,202 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
 
 
 /* ------------------------------------------------------------
-   VEHICLE TYPES — image grid
+   WHAT WE STORE — Carousel + Accordion
    ------------------------------------------------------------ */
-.vehicles .section-sub {
-  margin-bottom: 2rem;
+.vehicles {
+  background-color: #ffffff;
 }
 
-.vehicles-grid {
+.vehicles-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 1.75rem;
+  grid-template-columns: 1fr;
+  max-width: var(--max-width);
+  margin-inline: auto;
 }
 
-.vehicle-tile {
+/* ---- Carousel ---- */
+.carousel {
   position: relative;
-  border-radius: var(--radius-lg);
+  width: 100%;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  background-color: var(--navy);
 }
 
-.vehicle-tile img {
+.carousel-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  display: block;
 }
 
-.vehicle-tile:hover img {
-  transform: scale(1.04);
-}
-
-.vehicle-label {
+.carousel-dots {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(10,22,40,0.82) 0%, transparent 100%);
-  color: var(--white);
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.45);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.dot.active {
+  background-color: var(--gold);
+  transform: scale(1.25);
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---- Right column: content ---- */
+.vehicles-content {
+  padding: 3rem 1.5rem;
+}
+
+.vehicles-eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.85rem;
+}
+
+.vehicles-content h2 {
+  color: var(--navy);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.vehicles-sub {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 1.75rem;
+  line-height: 1.65;
+}
+
+/* ---- Accordion ---- */
+.accordion {
+  margin-bottom: 1.75rem;
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--border);
+  border-left: 3px solid transparent;
+  transition: border-left-color 0.2s;
+}
+
+.accordion-item.open {
+  border-left-color: var(--gold);
+}
+
+.accordion-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1rem 0.75rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s;
+}
+
+.accordion-trigger:hover {
+  background-color: #f9f6f0;
+}
+
+.accordion-trigger span:first-child {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1rem;
-  padding: 1.5rem 1rem 0.85rem;
+  font-size: 0.95rem;
+  color: var(--navy);
 }
 
-.vehicles-note {
-  font-size: 0.9rem;
+.accordion-icon {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.accordion-item.open .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.accordion-item.open .accordion-body {
+  max-height: 120px;
+}
+
+.accordion-body p {
+  font-size: 0.88rem;
   color: var(--text-light);
+  padding: 0.25rem 0.75rem 1rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.vehicles-disclaimer {
+  font-size: 0.82rem;
+  color: #9a9690;
   line-height: 1.6;
 }
 
-.vehicles-note em {
-  color: var(--text);
-}
-
-.vehicles-note a {
-  margin-left: 0.25rem;
-  white-space: nowrap;
-}
-
+/* ---- Responsive ---- */
 @media (min-width: 768px) {
-  .vehicles-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .vehicles-layout {
+    grid-template-columns: 3fr 2fr;
+    align-items: stretch;
+  }
+
+  .carousel {
+    aspect-ratio: unset;
+    height: 100%;
+    min-height: 460px;
+  }
+
+  .vehicles-content {
+    padding: 3.5rem 2.5rem 3.5rem 3rem;
   }
 }
 

@@ -52,3 +52,67 @@
     }
   });
 })();
+
+
+// ---- Carousel (auto-playing crossfade) ----
+(function () {
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots   = document.querySelectorAll('.dot');
+  if (!slides.length) return;
+
+  let current = 0;
+
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = index;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function next() {
+    goTo((current + 1) % slides.length);
+  }
+
+  // Auto-advance every 4 seconds
+  let timer = setInterval(next, 4000);
+
+  // Dot clicks restart the timer
+  dots.forEach(function (dot, i) {
+    dot.addEventListener('click', function () {
+      clearInterval(timer);
+      goTo(i);
+      timer = setInterval(next, 4000);
+    });
+  });
+
+  // Pause on hover, resume on leave
+  const carousel = document.querySelector('.carousel');
+  if (carousel) {
+    carousel.addEventListener('mouseenter', function () { clearInterval(timer); });
+    carousel.addEventListener('mouseleave', function () { timer = setInterval(next, 4000); });
+  }
+})();
+
+
+// ---- Accordion ----
+(function () {
+  document.querySelectorAll('.accordion-trigger').forEach(function (trigger) {
+    trigger.addEventListener('click', function () {
+      const item   = this.closest('.accordion-item');
+      const isOpen = item.classList.contains('open');
+
+      // Close all items
+      document.querySelectorAll('.accordion-item').forEach(function (i) {
+        i.classList.remove('open');
+        i.querySelector('.accordion-trigger').setAttribute('aria-expanded', 'false');
+      });
+
+      // If it was closed, open it
+      if (!isOpen) {
+        item.classList.add('open');
+        this.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+})();
