@@ -285,7 +285,8 @@
     <section class="vehicles" aria-labelledby="vehicles-heading">
       <div class="vehicles-layout">
 
-        <!-- Left column: Photo Carousel -->
+        <!-- Left column: wrapper centers carousel independently of right column -->
+        <div class="carousel-col">
         <div class="carousel" role="region" aria-label="Vehicle storage photo gallery">
           <div class="carousel-track">
 
@@ -325,6 +326,8 @@
             <button class="dot"></button>
           </div>
         </div>
+
+        </div><!-- /.carousel-col -->
 
         <!-- Right column: Accordion -->
         <div class="vehicles-content">
