@@ -124,8 +124,8 @@
               </span>
               <div>
                 <p class="contact-info__label">Phone</p>
-                <p class="contact-info__value"><a href="tel:+12697823090">(269) 782-3090</a></p>
-                <p class="contact-info__note">For quick questions, email is preferred — we respond within 24 hours.</p>
+                <p class="contact-info__value" style="font-weight:400;"><a href="tel:+12697823090">(269) 782-3090</a></p>
+                <p class="contact-info__note">We try to respond as quickly as possible within 24 hours.</p>
               </div>
             </li>
 
@@ -222,8 +222,8 @@
 
           </form>
 
-          <!-- Success state (hidden by default) -->
-          <div class="form-success" id="form-success" hidden aria-live="polite">
+          <!-- Success state — replaces form in place, fades in -->
+          <div class="form-success" id="form-success" style="display:none; opacity:0; transition: opacity 0.4s ease;" aria-live="polite">
             <span class="form-success__check" aria-hidden="true">✓</span>
             <h2 class="form-success__headline">We received your inquiry!</h2>
             <p class="form-success__sub">Thank you for reaching out. We'll be in touch within 24 hours. We look forward to storing your vehicle.</p>
@@ -310,8 +310,14 @@
 
       emailjs.sendForm('service_dybhya9', 'template_gjtuwz8', this)
         .then(function () {
-          document.getElementById('contact-form').hidden  = true;
-          document.getElementById('form-success').hidden  = false;
+          const form    = document.getElementById('contact-form');
+          const success = document.getElementById('form-success');
+          form.style.display   = 'none';
+          success.style.display = 'block';
+          // Trigger fade in on next paint
+          requestAnimationFrame(function () {
+            success.style.opacity = '1';
+          });
         })
         .catch(function () {
           error.hidden    = false;
