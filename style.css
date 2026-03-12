@@ -2619,7 +2619,7 @@ footer {
 }
 
 .sp-sidebar__link:hover {
-  color: rgba(250, 250, 248, 0.85);
+  color: var(--text);
 }
 
 .sp-sidebar__link--active {
@@ -2962,4 +2962,5 @@ footer {
 
 .sp-cta__btn:hover {
   background-color: var(--gold-dark);
+  color: var(--navy);
 }
