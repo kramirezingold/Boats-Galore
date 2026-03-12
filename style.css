@@ -2965,3 +2965,309 @@ footer {
   background-color: var(--gold-dark);
   color: var(--navy);
 }
+
+
+/* ============================================================
+   ABOUT PAGE  (ab-*)
+   ============================================================ */
+
+/* ---- Section 1: Page Hero ---- */
+.ab-hero {
+  background-color: var(--navy);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  padding: 100px 0;
+  padding-top: calc(var(--header-h, 72px) + 100px);
+}
+
+.ab-hero__inner {
+  max-width: 760px;
+}
+
+.ab-hero .eyebrow {
+  margin-bottom: 1.25rem;
+}
+
+.ab-hero__headline {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  color: var(--white);
+  line-height: 1.2;
+  margin: 0;
+}
+
+
+/* ---- Section 2: Family Story ---- */
+.ab-story {
+  background-color: #fafaf8;
+  padding: 100px 1.25rem;
+}
+
+.ab-story__inner {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+/* Pull quote */
+.ab-pullquote {
+  margin: 0 0 3.5rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.ab-pullquote p {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(1.25rem, 2.5vw, 1.625rem);
+  color: var(--navy);
+  line-height: 1.5;
+  max-width: 680px;
+  margin: 0;
+}
+
+.ab-pullquote__line {
+  display: block;
+  width: 48px;
+  height: 2px;
+  background-color: var(--gold);
+  border-radius: 2px;
+}
+
+/* Body copy */
+.ab-story__body {
+  font-size: 1.0625rem;
+  color: #1a2b47;
+  line-height: 1.85;
+}
+
+.ab-story__body p {
+  margin-bottom: 1.75rem;
+}
+
+.ab-story__body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Drop cap on first paragraph */
+.ab-dropcap::first-letter {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 4.5rem;
+  color: var(--gold);
+  float: left;
+  line-height: 0.78;
+  margin-right: 0.12em;
+  margin-top: 0.1em;
+}
+
+/* Horizontal rule divider */
+.ab-story__rule {
+  border: none;
+  border-top: 1px solid var(--gold);
+  opacity: 0.35;
+  margin: 3.5rem 0 0;
+}
+
+
+/* ---- Section 3: The Area ---- */
+.ab-area {
+  background-color: #f5f0e8;
+  padding: 100px 1.25rem;
+}
+
+.ab-area__inner {
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+.ab-area__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.ab-area__header .eyebrow {
+  margin-bottom: 1rem;
+}
+
+.ab-area__headline {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
+  color: var(--navy);
+  margin-bottom: 1.25rem;
+}
+
+.ab-area__sub {
+  font-size: 1.0625rem;
+  color: var(--text-light);
+  max-width: 680px;
+  margin-inline: auto;
+  line-height: 1.7;
+}
+
+/* Two-column layout */
+.ab-area__cols {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .ab-area__cols {
+    flex-direction: row;
+    gap: 60px;
+    align-items: flex-start;
+  }
+
+  .ab-area__copy {
+    flex: 1;
+  }
+
+  .ab-stats {
+    flex: 0 0 280px;
+  }
+}
+
+.ab-area__copy p {
+  font-size: 1rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+.ab-area__copy p:last-child {
+  margin-bottom: 0;
+}
+
+/* Stats column */
+.ab-stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.ab-stat {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid rgba(184, 150, 62, 0.18);
+}
+
+.ab-stat:last-child {
+  border-bottom: none;
+}
+
+.ab-stat__num {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 3.25rem;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.ab-stat__label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-light);
+}
+
+
+/* ---- Section 4: Values Strip ---- */
+.ab-values {
+  background-color: var(--navy);
+  padding: 80px 1.25rem;
+  text-align: center;
+}
+
+.ab-values__inner {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.ab-values .eyebrow {
+  margin-bottom: 3rem;
+}
+
+.ab-values__statements {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.ab-value {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.4;
+  margin: 0;
+  padding: 0.25rem 0;
+}
+
+.ab-value--white {
+  color: var(--white);
+}
+
+.ab-value--gold {
+  color: var(--gold);
+}
+
+.ab-values__dot {
+  font-size: 1.5rem;
+  color: var(--gold);
+  opacity: 0.4;
+  margin: 0.75rem 0;
+  line-height: 1;
+}
+
+
+/* ---- Section 5: Bottom CTA ---- */
+.ab-cta {
+  background-color: var(--gold);
+  padding: 100px 1.25rem;
+  text-align: center;
+}
+
+.ab-cta__inner {
+  max-width: 680px;
+}
+
+.ab-cta__headline {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  color: var(--navy);
+  margin-bottom: 1rem;
+}
+
+.ab-cta__sub {
+  font-size: 1.125rem;
+  color: var(--navy);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  opacity: 0.85;
+}
+
+.ab-cta__btn {
+  display: inline-block;
+  background-color: var(--navy);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 1.125rem 3.25rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.ab-cta__btn:hover {
+  background-color: var(--navy-mid);
+  color: var(--white);
+}
