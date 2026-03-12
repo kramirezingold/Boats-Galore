@@ -1,14 +1,14 @@
 # CLAUDE.md — Boats Galore Website Project
 
 ## Project Overview
-We are building a professional business website for **Boats Galore**, a vehicle and
-outdoor equipment storage business located in Dowagiac, Michigan. The owners are
-Mike Malin and Leslie Malin. They store boats, RVs, snowmobiles, ATVs, jet skis,
-trailers, and similar vehicles/equipment. They do NOT store cars, fifth wheels,
-or anything easily damaged by indoor unheated storage.
+A professional business website for **Boats Galore**, a vehicle and outdoor equipment
+storage business located in Dowagiac, Michigan. Owned and operated by Mike Malin and
+Leslie Malin. They store boats, RVs, snowmobiles, ATVs, jet skis, trailers, and similar
+vehicles. They do NOT store cars, fifth wheels, or anything easily damaged by indoor
+unheated storage.
 
-The business has been operating for several years but has NO existing online
-presence — no website, no Google Business listing, no social media.
+**Status: All four pages are built and deployed. The site is live at boats-galore.com
+via Vercel, auto-deploying from GitHub (kramirezingold/Boats-Galore).**
 
 ---
 
@@ -17,11 +17,13 @@ presence — no website, no Google Business listing, no social media.
 - **Owners:** Mike Malin and Leslie Malin
 - **Address:** 55235 Garrett Rd, Dowagiac, MI 49047
 - **Phone:** (269) 782-3090
-- **Email:** Lmalinmtl@gmail.com
-- **Domain:** boats-galore.com
+- **Email:** Lmalinmtl@gmail.com (displayed as text only — all contact routed through EmailJS)
+- **Domain:** boats-galore.com (Namecheap)
+- **Hosting:** Vercel — auto-deploys from GitHub main branch
+- **GitHub:** kramirezingold/Boats-Galore
 - **Access Hours:** 24/7
 - **New Customers:** Accepted year round
-- **Storage Type:** Indoor only (unheated barn/warehouse). No outdoor storage currently.
+- **Storage Type:** Indoor only (unheated barn/warehouse). No outdoor storage.
 
 ---
 
@@ -40,7 +42,6 @@ presence — no website, no Google Business listing, no social media.
 - Seasonal residents and visitors near Sister Lakes, MI
 - Owners of high-value vehicles: boats ($50k-$200k+), RVs, snowmobiles, ATVs
 - People who prioritize trust and security over the cheapest option
-- Customers who currently find the business through word of mouth
 
 ---
 
@@ -48,8 +49,7 @@ presence — no website, no Google Business listing, no social media.
 - **Premium and trustworthy** — not cheap, not corporate, not generic
 - **Local and family-owned** — warm, community-rooted, established
 - **Confident and simple** — clear information, easy to contact
-- Reference for information/pricing structure: lunastoragesolutions.com/services-rates
-  (use for content inspiration only, NOT for style or layout)
+- **About page is warmer/more editorial** — storytelling tone, not selling
 
 ### What to avoid:
 - Generic stock photo warehouse aesthetic
@@ -64,154 +64,165 @@ presence — no website, no Google Business listing, no social media.
 - **EmailJS** for contact form email delivery (free tier)
 - **Vercel** for hosting and deployment
 - **Custom domain:** boats-galore.com via Namecheap
-- All code must be clean, well-commented, and easy to update later
 
 ---
 
-## Site Structure (Pages)
-
-### 1. Home (index.html)
-- Hero section with strong headline and CTA button ("Request Storage" or "Contact Us")
-- Brief intro — who they are, what they offer, why trust them
-- Key feature highlights: 24/7 access, security cameras and lighting,
-  fast access when needed, pickup and drop-off service available
-- Visual grid of vehicle types stored
-- Pricing overview teaser with link to services page
-- Testimonials section (placeholder structure — to be filled with real reviews)
-- Final CTA section linking to contact page
-
-### 2. Services & Pricing (services.html)
-- What they store: boats, RVs, snowmobiles, ATVs, jet skis, trailers, and more
-- What they do NOT store: cars, fifth wheels, items easily damaged by
-  unheated indoor storage
-- Storage type: Indoor unheated barn/warehouse
-- Pricing section — use realistic placeholder pricing structure:
-  - Small vehicles (snowmobiles, ATVs, jet skis): [TBD]/month or [TBD]/season
-  - Medium vehicles (boats up to 24ft, small trailers): [TBD]/month or [TBD]/season
-  - Large vehicles (boats 24ft+, RVs, large trailers): [TBD]/month or [TBD]/season
-  - Note: "Pricing varies by vehicle size and storage duration.
-    Contact us for an exact quote."
-  - [OWNER TO CONFIRM ACTUAL RATES BEFORE LAUNCH]
-- Special services:
-  - 24/7 customer access
-  - Faster access turnaround than most competitors in the area
-  - Pickup and drop-off available (requires several days advance notice)
-  - Security cameras and lighting on property
-
-### 3. About (about.html)
-- Family-owned and operated by Mike and Leslie Malin
-- Based in Dowagiac, MI — conveniently located near Sister Lakes
-- Years of experience serving the local community
-- What makes them different: 24/7 access, personalized service,
-  fast response times, pickup/drop-off convenience
-- A brief statement about their commitment to keeping customers'
-  vehicles safe and accessible
-
-### 4. Contact (contact.html)
-- Contact form: Full Name, Email, Phone, Vehicle Type (dropdown),
-  Approximate Size/Length, Message/Questions
-- Form submits via EmailJS to Lmalinmtl@gmail.com
-- Phone and email displayed prominently:
-  (269) 782-3090 | Lmalinmtl@gmail.com
-- Address: 55235 Garrett Rd, Dowagiac, MI 49047
-- Google Maps embed showing the location
-- Note about response time: "We typically respond within 24 hours"
+## EmailJS Credentials
+- **Public Key:** PihDcOwei2Nh1fjSQ
+- **Service ID:** service_dybhya9
+- **Template ID:** template_gjtuwz8
+- **Form fields sent:** from_name, from_email, phone, what_to_store,
+  vehicle_size, dropoff_date, heard_from, message
+- Do not change these IDs without updating the EmailJS dashboard to match.
 
 ---
 
-## Pricing Placeholder Guidelines
-Until the owner confirms exact pricing, use this structure:
-- Display pricing as tiers based on vehicle size
-- Always include: "Pricing varies by vehicle size and storage duration.
-  Contact us for a personalized quote."
-- Use [TBD] markers wherever exact prices would go
-- Structure the pricing section so real numbers can be swapped in easily later
+## Site Structure — All Pages Complete
+
+### 1. Home (index.html) ✓
+- Hero: full-viewport, `images/Hero_2.jpg` background, navy overlay
+- Trust bar, intro/about snippet
+- Features 4-card grid (24/7, Security, Fast Access, Pickup & Drop-off)
+- What We Store: photo carousel (6 real facility photos) + accordion
+- Storage & Services: tab switcher (Rates tab / Our Services tab)
+- Testimonials: 8-review auto-rotating carousel with infinite loop
+- CTA banner: two-column with Google Maps embed
+- Footer: 3-column with address, quick links, hours
+
+### 2. Services & Pricing (services.html) ✓
+- Layout: sticky sidebar (desktop) + 7 scrollable panels
+- Mobile: horizontal scrollable pill nav replaces sidebar
+- 7 panels: Seasonal Storage, Winterization, Cleaning & Wash, Shrink Wrap,
+  Maintenance, Pickup & Drop-Off, Custom Requests
+- IntersectionObserver tracks active panel and highlights sidebar link
+- Scroll-in animations on desktop via IntersectionObserver
+- Bottom CTA: navy background, gold button
+
+### 3. About (about.html) ✓
+- Section 1: Navy page hero, Playfair Display headline
+- Section 2: Family story — pull quote, drop cap, 3 paragraphs, gold rule
+- Section 3: Sister Lakes area — two-column, copy left / stats right (10+, 4, 24/7, 1)
+- Section 4: Values strip — compact horizontal banner, 3 statements, gold dividers
+- Section 5: Gold CTA section
+- Scroll-in animations (desktop only) via IntersectionObserver
+
+### 4. Contact (contact.html) ✓
+- Two-column: contact info + map (left) / inquiry form (right)
+- 8-field form: from_name, from_email, phone, what_to_store, vehicle_size,
+  dropoff_date, heard_from, message
+- On submit: form fades out, success message fades in
+- Google Maps embed + Get Directions link
 
 ---
 
-## Special Services to Highlight
-These are genuine differentiators — make them prominent:
-- **24/7 Access** — customers can retrieve their vehicle any time, day or night
-- **Faster than competitors** — quicker turnaround when customers need their vehicle
-- **Pickup & Drop-off** — available with several days advance notice
-- **Security** — cameras and lighting throughout the property
-- **Indoor storage** — protected from Michigan weather year round
+## Design System
+
+### Colors (CSS custom properties)
+```
+--navy:       #0a1628   (primary background, headers, footer)
+--navy-mid:   #112040   (hover states)
+--white:      #fafaf8   (page backgrounds)
+--gold:       #b8963e   (accents, eyebrows, CTA)
+--gold-dark:  #9a7830   (hover on gold elements)
+--gold-light: #d4a855
+--text:       #1e2a3a   (body copy)
+--text-light: #5a6a7a   (muted copy)
+--bg-alt:     #f3f2ef   (alternating section backgrounds)
+--border:     #ddd9d0
+```
+
+### Typography
+- **Headlines:** Playfair Display 700 (serif, editorial feel)
+- **Sub-headlines / nav:** Raleway 700/800
+- **Body:** DM Sans 400/500
+- Google Fonts import includes italic variant of Playfair Display for about.html
+
+### Layout Breakpoints
+- Mobile base styles (no media query)
+- `min-width: 640px` — small tablet / large phone
+- `min-width: 768px` — tablet
+- `min-width: 900px` — services sidebar becomes visible
+- `min-width: 1100px` — full desktop
+
+### Recurring Design Patterns
+- **Eyebrow labels:** small gold uppercase wide-tracking text above headings
+- **Gold divider:** `<div class="section-divider">` thin gold line between eyebrow and h2
+- **Dot texture:** `radial-gradient` on navy sections for subtle depth
+- **Section alternation:** white (#fafaf8) and warm cream (#f5f0e8) backgrounds
+- **Footer:** always has `border-top: 3px solid var(--gold)` separator
 
 ---
 
-## SEO Requirements
-Build these in from day one — do not add later:
+## Images
+All images live in `/images/`. Current inventory:
+- `Hero_2.jpg` — home page hero background (in use)
+- `Hero_1.jpg` — spare hero photo (not currently used)
+- `Boat.jpg`, `rv.jpg`, `snowmobile.jpg`, `atv.jpg`, `jet ski.jpg`, `trailer.jpg`
+  — real facility photos used in the "What We Store" carousel on index.html
+- `sister-lakes.avif` — original hero placeholder (no longer used)
 
-- Each page must have a unique `<title>` tag and `<meta name="description">`
-- Use semantic HTML: `<header>`, `<main>`, `<section>`, `<footer>`,
-  proper heading hierarchy (one H1 per page, logical H2/H3 structure)
-- Target keywords to weave naturally into copy:
-  - "boat storage Dowagiac MI"
-  - "RV storage near Sister Lakes"
-  - "outdoor vehicle storage Michigan"
-  - "snowmobile storage southwest Michigan"
-  - "boat storage near me Dowagiac"
-  - "24/7 vehicle storage Michigan"
-- Add `alt` text to every image
-- Ensure fast load times — optimize images, minimize CSS/JS
-- Add a `sitemap.xml` and `robots.txt` file
-- Add local business schema markup:
-  Name: Boats Galore
-  Address: 55235 Garrett Rd, Dowagiac, MI 49047
-  Phone: (269) 782-3090
-  Type: SelfStorage
+Note: `jet ski.jpg` has a space in the filename. It works but could be renamed
+to `jet-ski.jpg` before launch for cleanliness.
 
 ---
 
-## Contact Form (EmailJS Setup)
-- Use EmailJS free tier
-- Form fields: Full Name, Email, Phone, Vehicle Type (dropdown:
-  Boat, RV, Snowmobile, ATV, Jet Ski, Trailer, Other),
-  Approximate Size/Length, Message
-- On submit: send email to Lmalinmtl@gmail.com
-- Show clear success message to user after submission
-- Add basic validation: required fields, valid email format
-- Never expose EmailJS service ID or template ID in comments
+## SEO — Completed
+- Unique `<title>` and `<meta name="description">` on every page
+- JSON-LD SelfStorage schema on every page (with description field)
+- `sitemap.xml` created — lists all 4 pages with priority weights
+- `robots.txt` created — allows all crawlers, points to sitemap
+- Semantic HTML throughout (header, main, section, footer, nav, aside)
+- Alt text on all images
+- One H1 per page, logical H2/H3 hierarchy
 
 ---
 
-## Design Direction
-- **Color palette:** Deep navy blue (#0a1628) as primary, warm white (#fafaf8)
-  for backgrounds, gold/amber (#c9943a) as accent. Conveys trust,
-  premium quality, and the outdoors.
-- **Typography:** A clean display font for headlines paired with a readable
-  sans-serif for body. Avoid Arial, Roboto, generic system fonts.
-  Suggest: Raleway or Playfair Display for headlines, DM Sans for body.
-- **Layout:** Spacious, clean sections. Let content breathe.
-  No cramped layouts, no cluttered sidebars.
-- **Images:** High quality photos from Unsplash as placeholders.
-  Search terms: "boat storage", "marina barn", "RV storage facility",
-  "snowmobile storage", "Michigan lake boat"
-- **Mobile-first:** Build mobile layout first, then desktop
-- **CTA buttons** on every page — always give the user a clear next action
-- No carousels, no auto-playing video or audio
+## Known Technical Rules — Do Not Violate
+
+### CSS
+- **Never use `overflow-x: hidden` on `html` or `body`** — it breaks
+  `position: sticky` on the services sidebar. Use `overflow-x: clip` instead.
+  `clip` prevents horizontal scroll without creating a scroll container.
+- **Never use `white-space: nowrap` on headline or body text without wrapping
+  it in a `min-width` media query** — it causes horizontal overflow on mobile.
+- Global `a:hover { color: var(--gold-dark) }` exists in style.css. Any button
+  or link with a non-gold text color needs an explicit `color` override in its
+  own `:hover` rule, or the global rule will bleed through.
+- The footer has `border-top: 3px solid var(--gold)` — this is intentional on
+  all pages to separate it from adjacent navy sections.
+
+### JavaScript
+- The reviews carousel in script.js clones 3 cards before and after the real
+  cards for infinite looping. The total in the DOM is `real cards + 6 clones`.
+  Do not change the card count without updating the clone logic.
+- The services page sidebar uses IntersectionObserver with
+  `rootMargin: '-30% 0px -60% 0px'` to track the active panel. The scroll-in
+  animation observer uses `threshold: 0.08`.
+- All scroll animations use IntersectionObserver and are disabled on mobile
+  (`max-width: 767px` or `max-width: 899px` depending on the page).
+
+---
+
+## Before Launch Checklist
+- [ ] Confirm actual pricing with Mike and Leslie — replace all [TBD] in services.html
+- [ ] Rename `jet ski.jpg` → `jet-ski.jpg` and update src in index.html
+- [ ] Set up Google Business listing (after site is live)
+- [ ] Verify EmailJS template variables match form field names exactly
+- [ ] Test contact form end-to-end — confirm email arrives at Lmalinmtl@gmail.com
+- [ ] Test on real mobile device (not just browser DevTools)
+- [ ] Submit sitemap to Google Search Console after launch
 
 ---
 
 ## Things Claude Should Never Do
 - Do not use placeholder text like "Lorem ipsum" anywhere
 - Do not invent specific pricing numbers — use [TBD] placeholders
-- Do not invent testimonials or reviews — use placeholder structure only
-- Do not mention any connection to a landscaping business
+- Do not invent testimonials or reviews — use the real 8 reviews already in index.html
+- Do not mention any connection to a landscaping business (the Malins ran one
+  previously — it should not appear on this site)
 - Do not add features that require a backend server
 - Do not use React or any JavaScript framework
-- Do not make the site look like a Squarespace or Wix template
 - Do not add unnecessary pages or features beyond the four defined above
 - Do not place the owner's personal email visibly in source code —
   route all contact through EmailJS only
-
----
-
-## Development Workflow
-1. Build and test locally first
-2. Push to GitHub after each completed page
-3. Vercel auto-deploys from GitHub main branch
-4. Test on mobile after every significant change
-5. Replace stock photo placeholders with real facility photos before final launch
-6. Confirm pricing section with owner before sharing live link
-7. Help owner set up Google Business listing after site launches
+- Do not use `overflow-x: hidden` on html/body — use `clip` instead
