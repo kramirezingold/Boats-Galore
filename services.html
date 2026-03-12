@@ -84,288 +84,473 @@
       <div class="container page-hero__inner">
         <p class="eyebrow">What We Offer</p>
         <h1 class="page-hero__headline">Storage &amp; Services</h1>
-        <p class="page-hero__sub">Straightforward indoor storage with the add-on services you actually need — all in one place.</p>
+        <p class="page-hero__sub">Everything your vehicle needs — from seasonal storage to full winterization.</p>
       </div>
     </section>
 
 
     <!-- ============================================================
-         SECTION 1 — STORAGE RATES
+         MOBILE PILL NAV (visible only on small screens)
          ============================================================ -->
-    <section class="svc-rates" aria-labelledby="rates-heading">
-      <div class="container">
-
-        <p class="eyebrow eyebrow-light">Storage Rates</p>
-        <div class="section-divider svc-divider" aria-hidden="true"></div>
-        <h2 id="rates-heading" class="svc-section-headline">Simple Seasonal Pricing</h2>
-        <p class="section-sub">All rates cover October through April. Pickup and drop-off is included with every storage plan. Add-on services available to storage customers only.</p>
-
-        <ul class="svc-rate-grid" role="list">
-
-          <!-- Card 1: Small -->
-          <li class="svc-rate-card" style="--stagger:0ms">
-            <div class="svc-rate-card__top">
-              <h3 class="svc-rate-card__name">Small</h3>
-              <p class="svc-rate-card__desc">Snowmobiles, ATVs &amp; Jet Skis</p>
-            </div>
-            <hr class="svc-rate-card__hr" aria-hidden="true" />
-            <ul class="svc-rate-card__includes" aria-label="What's included">
-              <li>Indoor barn storage</li>
-              <li>24/7 access year-round</li>
-              <li>Security cameras &amp; lighting</li>
-              <li>Pickup &amp; drop-off included</li>
-            </ul>
-            <div class="svc-rate-card__bottom">
-              <span class="svc-rate-card__price">$199</span>
-              <span class="svc-rate-card__sublabel">/season · Oct–Apr</span>
-              <a href="contact.html" class="svc-rate-card__cta">Get Started →</a>
-            </div>
-          </li>
-
-          <!-- Card 2: Medium -->
-          <li class="svc-rate-card" style="--stagger:100ms">
-            <div class="svc-rate-card__top">
-              <h3 class="svc-rate-card__name">Medium</h3>
-              <p class="svc-rate-card__desc">Boats up to 22ft &amp; Small Trailers</p>
-            </div>
-            <hr class="svc-rate-card__hr" aria-hidden="true" />
-            <ul class="svc-rate-card__includes" aria-label="What's included">
-              <li>Indoor barn storage</li>
-              <li>24/7 access year-round</li>
-              <li>Security cameras &amp; lighting</li>
-              <li>Pickup &amp; drop-off included</li>
-            </ul>
-            <div class="svc-rate-card__bottom">
-              <span class="svc-rate-card__price">$349</span>
-              <span class="svc-rate-card__sublabel">/season · Oct–Apr</span>
-              <a href="contact.html" class="svc-rate-card__cta">Get Started →</a>
-            </div>
-          </li>
-
-          <!-- Card 3: Large -->
-          <li class="svc-rate-card" style="--stagger:200ms">
-            <div class="svc-rate-card__top">
-              <h3 class="svc-rate-card__name">Large</h3>
-              <p class="svc-rate-card__desc">Boats 22–30ft &amp; Larger Trailers</p>
-            </div>
-            <hr class="svc-rate-card__hr" aria-hidden="true" />
-            <ul class="svc-rate-card__includes" aria-label="What's included">
-              <li>Indoor barn storage</li>
-              <li>24/7 access year-round</li>
-              <li>Security cameras &amp; lighting</li>
-              <li>Pickup &amp; drop-off included</li>
-            </ul>
-            <div class="svc-rate-card__bottom">
-              <span class="svc-rate-card__price">$499</span>
-              <span class="svc-rate-card__sublabel">/season · Oct–Apr</span>
-              <a href="contact.html" class="svc-rate-card__cta">Get Started →</a>
-            </div>
-          </li>
-
-          <!-- Card 4: Extra Large -->
-          <li class="svc-rate-card" style="--stagger:300ms">
-            <div class="svc-rate-card__top">
-              <h3 class="svc-rate-card__name">Extra Large</h3>
-              <p class="svc-rate-card__desc">Boats 30ft+ &amp; RVs</p>
-            </div>
-            <hr class="svc-rate-card__hr" aria-hidden="true" />
-            <ul class="svc-rate-card__includes" aria-label="What's included">
-              <li>Indoor barn storage</li>
-              <li>24/7 access year-round</li>
-              <li>Security cameras &amp; lighting</li>
-              <li>Pickup &amp; drop-off included</li>
-            </ul>
-            <div class="svc-rate-card__bottom">
-              <span class="svc-rate-card__price svc-rate-card__price--quote">Custom Quote</span>
-              <a href="contact.html" class="btn btn-outline-gold svc-rate-card__quote-btn">Request a Quote →</a>
-            </div>
-          </li>
-
-        </ul>
-
+    <nav class="sp-mobile-nav" aria-label="Jump to service">
+      <div class="sp-mobile-nav__track">
+        <a href="#panel-storage"     class="sp-pill">Seasonal Storage</a>
+        <a href="#panel-winterize"   class="sp-pill">Winterization</a>
+        <a href="#panel-wash"        class="sp-pill">Cleaning &amp; Wash</a>
+        <a href="#panel-shrink"      class="sp-pill">Shrink Wrap</a>
+        <a href="#panel-maintenance" class="sp-pill">Maintenance</a>
+        <a href="#panel-pickup"      class="sp-pill">Pickup &amp; Drop-Off</a>
+        <a href="#panel-custom"      class="sp-pill">Custom Requests</a>
       </div>
-    </section>
+    </nav>
 
 
     <!-- ============================================================
-         SECTION 2 — ADD-ON SERVICES
+         STICKY SIDEBAR + PANELS
          ============================================================ -->
-    <section class="addon-svc" aria-labelledby="addons-heading">
-      <div class="container">
+    <div class="sp-outer">
+      <div class="sp-inner">
 
-        <p class="eyebrow eyebrow-light">Add-On Services</p>
-        <div class="section-divider svc-divider" aria-hidden="true"></div>
-        <h2 id="addons-heading" class="svc-section-headline">Everything Your Vehicle Needs</h2>
-        <p class="section-sub">Available exclusively to Boats Galore storage customers.</p>
+        <!-- ── Sticky sidebar ── -->
+        <aside class="sp-sidebar" aria-label="Services navigation">
+          <p class="sp-sidebar__label">Services</p>
+          <ul class="sp-sidebar__list">
+            <li><a href="#panel-storage"     class="sp-sidebar__link sp-sidebar__link--active">Seasonal Storage</a></li>
+            <li><a href="#panel-winterize"   class="sp-sidebar__link">Winterization</a></li>
+            <li><a href="#panel-wash"        class="sp-sidebar__link">Boat Cleaning &amp; Wash</a></li>
+            <li><a href="#panel-shrink"      class="sp-sidebar__link">Shrink Wrap</a></li>
+            <li><a href="#panel-maintenance" class="sp-sidebar__link">Maintenance &amp; Repair</a></li>
+            <li><a href="#panel-pickup"      class="sp-sidebar__link">Pickup &amp; Drop-Off</a></li>
+            <li><a href="#panel-custom"      class="sp-sidebar__link">Custom Requests</a></li>
+          </ul>
+          <div class="sp-sidebar__divider" aria-hidden="true"></div>
+          <p class="sp-sidebar__note">Add-on services available to storage customers only.</p>
+        </aside>
 
-        <ul class="addon-grid" role="list">
+        <!-- ── Scrolling panels ── -->
+        <div class="sp-panels">
 
-          <!-- 1: Winterization -->
-          <li class="addon-card" style="--stagger:0ms">
-            <div class="addon-card__icon" aria-hidden="true">🧊</div>
-            <h3 class="addon-card__name">Winterization</h3>
-            <p class="addon-card__desc">Full off-season prep including engine fogging, fluid draining, antifreeze treatment, battery removal, and shrink wrapping. We handle everything so your vessel is protected and ready to go in spring.</p>
-            <hr class="addon-card__hr" aria-hidden="true" />
-            <span class="addon-card__price">Call for Quote</span>
-            <a href="contact.html" class="addon-card__cta">Contact Us →</a>
-          </li>
+          <!-- ── PANEL 1: Seasonal Storage ── -->
+          <section class="sp-panel sp-panel--odd" id="panel-storage" aria-labelledby="panel-storage-title">
+            <div class="sp-panel__top">
+              <span class="sp-panel__num" aria-hidden="true">01</span>
+              <div class="sp-panel__heading">
+                <h2 id="panel-storage-title">Seasonal Storage</h2>
+                <p class="sp-panel__descriptor">October through April · Indoor Barn</p>
+              </div>
+            </div>
+            <div class="sp-panel__content">
+              <div class="sp-steps">
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>1</span></div>
+                  <div class="sp-step__body">
+                    <strong>Drop-Off</strong>
+                    <p>Bring your vehicle to us or we come to you — pickup is included.</p>
+                  </div>
+                </div>
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>2</span></div>
+                  <div class="sp-step__body">
+                    <strong>Intake</strong>
+                    <p>We document your vehicle's condition and assign your storage bay.</p>
+                  </div>
+                </div>
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>3</span></div>
+                  <div class="sp-step__body">
+                    <strong>Secure Storage</strong>
+                    <p>Your vehicle stays in our locked, lit barn with camera coverage.</p>
+                  </div>
+                </div>
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>4</span></div>
+                  <div class="sp-step__body">
+                    <strong>Access Anytime</strong>
+                    <p>Come and go 24/7 — no need to call ahead.</p>
+                  </div>
+                </div>
+                <div class="sp-step sp-step--last">
+                  <div class="sp-step__marker"><span>5</span></div>
+                  <div class="sp-step__body">
+                    <strong>Spring Pickup</strong>
+                    <p>We notify you when the season ends and arrange drop-off or you retrieve it yourself.</p>
+                  </div>
+                </div>
+              </div>
 
-          <!-- 2: Cleaning & Wash -->
-          <li class="addon-card" style="--stagger:100ms">
-            <div class="addon-card__icon" aria-hidden="true">🚿</div>
-            <h3 class="addon-card__name">Cleaning &amp; Wash</h3>
-            <p class="addon-card__desc">Full exterior wash and hull cleaning before or after storage. We'll have your boat looking its best at drop-off or pickup.</p>
-            <hr class="addon-card__hr" aria-hidden="true" />
-            <!-- TODO: confirm price with owner -->
-            <span class="addon-card__price">$[TBD]/service</span>
-            <a href="contact.html" class="addon-card__cta">Contact Us →</a>
-          </li>
+              <div class="sp-details">
+                <div class="sp-details__pricing">
+                  <p class="sp-details__label">Pricing</p>
+                  <ul class="sp-details__price-list">
+                    <li><span class="sp-details__tier">Small</span><span class="sp-details__amount">$199<span class="sp-details__per">/season</span></span></li>
+                    <li><span class="sp-details__tier">Medium</span><span class="sp-details__amount">$349<span class="sp-details__per">/season</span></span></li>
+                    <li><span class="sp-details__tier">Large</span><span class="sp-details__amount">$499<span class="sp-details__per">/season</span></span></li>
+                    <li><span class="sp-details__tier">Extra Large</span><span class="sp-details__amount sp-details__amount--quote">Contact for Quote</span></li>
+                  </ul>
+                  <p class="sp-details__tier-note">Small: Snowmobiles, ATVs, Jet Skis · Medium: Boats up to 22ft · Large: Boats 22–30ft · Extra Large: 30ft+ &amp; RVs</p>
+                </div>
+                <div class="sp-details__meta">
+                  <p><span class="sp-details__meta-label">Best for:</span> Anyone needing secure, worry-free off-season storage</p>
+                  <p><span class="sp-details__meta-label">What to expect:</span> One flat rate covers the full season — no monthly billing, no surprises</p>
+                </div>
+                <a href="contact.html" class="sp-details__cta">Get Started →</a>
+              </div>
+            </div>
+          </section>
 
-          <!-- 3: Shrink Wrap -->
-          <li class="addon-card" style="--stagger:200ms">
-            <div class="addon-card__icon" aria-hidden="true">📦</div>
-            <h3 class="addon-card__name">Shrink Wrap</h3>
-            <p class="addon-card__desc">Professional shrink wrapping for added protection between seasons. Keeps moisture, debris, and the elements out all winter long.</p>
-            <hr class="addon-card__hr" aria-hidden="true" />
-            <!-- TODO: confirm price with owner -->
-            <span class="addon-card__price">$[TBD]/service</span>
-            <a href="contact.html" class="addon-card__cta">Contact Us →</a>
-          </li>
+          <hr class="sp-panel-divider" aria-hidden="true" />
 
-          <!-- 4: Maintenance & Repair -->
-          <li class="addon-card" style="--stagger:0ms">
-            <div class="addon-card__icon" aria-hidden="true">🔧</div>
-            <h3 class="addon-card__name">Maintenance &amp; Repair</h3>
-            <p class="addon-card__desc">Basic mechanical work and seasonal tune-ups performed while your vehicle is in storage. Ask us what's available for your specific vehicle.</p>
-            <hr class="addon-card__hr" aria-hidden="true" />
-            <span class="addon-card__price">Call for Quote</span>
-            <a href="contact.html" class="addon-card__cta">Contact Us →</a>
-          </li>
+          <!-- ── PANEL 2: Winterization ── -->
+          <section class="sp-panel sp-panel--even" id="panel-winterize" aria-labelledby="panel-winterize-title">
+            <div class="sp-panel__top">
+              <span class="sp-panel__num" aria-hidden="true">02</span>
+              <div class="sp-panel__heading">
+                <h2 id="panel-winterize-title">Winterization</h2>
+                <p class="sp-panel__descriptor">Full Off-Season Prep · Storage Customers Only</p>
+              </div>
+            </div>
+            <div class="sp-panel__content">
+              <div class="sp-steps">
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>1</span></div>
+                  <div class="sp-step__body">
+                    <strong>Engine Fogging</strong>
+                    <p>Protective oil fogged into the engine to prevent corrosion during storage.</p>
+                  </div>
+                </div>
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>2</span></div>
+                  <div class="sp-step__body">
+                    <strong>Fluid Draining</strong>
+                    <p>All water and fuel lines are drained to prevent freeze damage.</p>
+                  </div>
+                </div>
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>3</span></div>
+                  <div class="sp-step__body">
+                    <strong>Antifreeze Treatment</strong>
+                    <p>Antifreeze applied to remaining systems to protect against Michigan winters.</p>
+                  </div>
+                </div>
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>4</span></div>
+                  <div class="sp-step__body">
+                    <strong>Battery Removal</strong>
+                    <p>Battery is safely removed and stored to preserve its charge.</p>
+                  </div>
+                </div>
+                <div class="sp-step sp-step--last">
+                  <div class="sp-step__marker"><span>5</span></div>
+                  <div class="sp-step__body">
+                    <strong>Shrink Wrapping</strong>
+                    <p>Full professional wrap applied to seal out moisture and debris.</p>
+                  </div>
+                </div>
+              </div>
 
-          <!-- 5: Pickup & Drop-Off -->
-          <li class="addon-card" style="--stagger:100ms">
-            <div class="addon-card__icon" aria-hidden="true">🚚</div>
-            <h3 class="addon-card__name">Pickup &amp; Drop-Off</h3>
-            <p class="addon-card__desc">We come to you at the start and end of every season. Just give us a few days notice and we'll handle the rest — no trailer needed.</p>
-            <hr class="addon-card__hr" aria-hidden="true" />
-            <span class="addon-card__price addon-card__price--included">Included with Storage</span>
-            <a href="contact.html" class="addon-card__cta">Contact Us →</a>
-          </li>
+              <div class="sp-details">
+                <div class="sp-details__pricing">
+                  <p class="sp-details__label">Pricing</p>
+                  <p class="sp-details__main-price">Contact for Quote</p>
+                  <p class="sp-details__range">Typical range: $250–$450 depending on vessel size</p>
+                </div>
+                <div class="sp-details__meta">
+                  <p><span class="sp-details__meta-label">Best for:</span> Boat owners who want full protection handled for them</p>
+                  <p><span class="sp-details__meta-label">What to expect:</span> We handle everything — your boat goes in ready for winter, comes out ready to launch</p>
+                </div>
+                <a href="contact.html" class="sp-details__cta">Request a Quote →</a>
+              </div>
+            </div>
+          </section>
 
-          <!-- 6: Custom Requests -->
-          <li class="addon-card" style="--stagger:200ms">
-            <div class="addon-card__icon" aria-hidden="true">📋</div>
-            <h3 class="addon-card__name">Custom Requests</h3>
-            <p class="addon-card__desc">Have something specific in mind that isn't listed here? Give us a call and we'll do our best to accommodate your needs.</p>
-            <hr class="addon-card__hr" aria-hidden="true" />
-            <span class="addon-card__price">Call for Quote</span>
-            <a href="contact.html" class="addon-card__cta">Contact Us →</a>
-          </li>
+          <hr class="sp-panel-divider" aria-hidden="true" />
 
-        </ul>
+          <!-- ── PANEL 3: Boat Cleaning & Wash ── -->
+          <section class="sp-panel sp-panel--odd" id="panel-wash" aria-labelledby="panel-wash-title">
+            <div class="sp-panel__top">
+              <span class="sp-panel__num" aria-hidden="true">03</span>
+              <div class="sp-panel__heading">
+                <h2 id="panel-wash-title">Boat Cleaning &amp; Wash</h2>
+                <p class="sp-panel__descriptor">Before or After Storage · Storage Customers Only</p>
+              </div>
+            </div>
+            <div class="sp-panel__content">
+              <div class="sp-steps">
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>1</span></div>
+                  <div class="sp-step__body">
+                    <strong>Exterior Wash</strong>
+                    <p>Full hull and topside wash to remove dirt, algae, and water deposits.</p>
+                  </div>
+                </div>
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>2</span></div>
+                  <div class="sp-step__body">
+                    <strong>Hull Scrub</strong>
+                    <p>Below-waterline cleaning to remove buildup from the season.</p>
+                  </div>
+                </div>
+                <div class="sp-step sp-step--last">
+                  <div class="sp-step__marker"><span>3</span></div>
+                  <div class="sp-step__body">
+                    <strong>Rinse &amp; Dry</strong>
+                    <p>Full rinse and dry-down before storage or delivery.</p>
+                  </div>
+                </div>
+              </div>
 
-      </div>
-    </section>
+              <div class="sp-details">
+                <div class="sp-details__pricing">
+                  <p class="sp-details__label">Pricing</p>
+                  <p class="sp-details__main-price">Starting at $75</p>
+                  <p class="sp-details__range">Larger vessels: $100–$150</p>
+                </div>
+                <div class="sp-details__meta">
+                  <p><span class="sp-details__meta-label">Best for:</span> Storing a clean boat or picking one up ready for the water</p>
+                  <p><span class="sp-details__meta-label">What to expect:</span> Drop it off dirty, get it back clean</p>
+                </div>
+                <a href="contact.html" class="sp-details__cta">Request a Quote →</a>
+              </div>
+            </div>
+          </section>
 
+          <hr class="sp-panel-divider" aria-hidden="true" />
 
-    <!-- ============================================================
-         SECTION 3 — FAQ
-         ============================================================ -->
-    <section class="svc-faq" aria-labelledby="faq-heading">
-      <div class="container">
+          <!-- ── PANEL 4: Shrink Wrap ── -->
+          <section class="sp-panel sp-panel--even" id="panel-shrink" aria-labelledby="panel-shrink-title">
+            <div class="sp-panel__top">
+              <span class="sp-panel__num" aria-hidden="true">04</span>
+              <div class="sp-panel__heading">
+                <h2 id="panel-shrink-title">Shrink Wrap</h2>
+                <p class="sp-panel__descriptor">Professional Wrap · Storage Customers Only</p>
+              </div>
+            </div>
+            <div class="sp-panel__content">
+              <div class="sp-steps">
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>1</span></div>
+                  <div class="sp-step__body">
+                    <strong>Surface Prep</strong>
+                    <p>Boat is cleaned and all hatches secured before wrapping.</p>
+                  </div>
+                </div>
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>2</span></div>
+                  <div class="sp-step__body">
+                    <strong>Frame Setup</strong>
+                    <p>Support frame installed to prevent wrap from pooling water.</p>
+                  </div>
+                </div>
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>3</span></div>
+                  <div class="sp-step__body">
+                    <strong>Wrapping</strong>
+                    <p>Heavy-duty shrink film applied and heat-sealed around the full vessel.</p>
+                  </div>
+                </div>
+                <div class="sp-step sp-step--last">
+                  <div class="sp-step__marker"><span>4</span></div>
+                  <div class="sp-step__body">
+                    <strong>Ventilation</strong>
+                    <p>Vents added to prevent moisture buildup inside the wrap.</p>
+                  </div>
+                </div>
+              </div>
 
-        <p class="eyebrow">FAQ</p>
-        <div class="section-divider svc-divider" aria-hidden="true"></div>
-        <h2 id="faq-heading" class="svc-section-headline svc-section-headline--light">Common Questions</h2>
+              <div class="sp-details">
+                <div class="sp-details__pricing">
+                  <p class="sp-details__label">Pricing</p>
+                  <p class="sp-details__main-price">Starting at $150</p>
+                  <p class="sp-details__range">Larger vessels: $200–$300+</p>
+                </div>
+                <div class="sp-details__meta">
+                  <p><span class="sp-details__meta-label">Best for:</span> Extra protection on top of indoor storage, or between seasons</p>
+                  <p><span class="sp-details__meta-label">What to expect:</span> A sealed, weatherproof wrap that holds all season</p>
+                </div>
+                <a href="contact.html" class="sp-details__cta">Request a Quote →</a>
+              </div>
+            </div>
+          </section>
 
-        <dl class="faq-list">
+          <hr class="sp-panel-divider" aria-hidden="true" />
 
-          <div class="accordion-item">
-            <dt>
-              <button class="accordion-trigger faq-trigger" aria-expanded="false">
-                Do I need insurance to store my vehicle here?
-                <span class="faq-icon" aria-hidden="true">+</span>
-              </button>
-            </dt>
-            <dd class="accordion-body faq-body">
-              <p>We recommend all customers maintain their own insurance on stored vehicles. Please contact us if you have specific questions before drop-off.</p>
-            </dd>
-          </div>
+          <!-- ── PANEL 5: Maintenance & Repair ── -->
+          <section class="sp-panel sp-panel--odd" id="panel-maintenance" aria-labelledby="panel-maintenance-title">
+            <div class="sp-panel__top">
+              <span class="sp-panel__num" aria-hidden="true">05</span>
+              <div class="sp-panel__heading">
+                <h2 id="panel-maintenance-title">Maintenance &amp; Repair</h2>
+                <p class="sp-panel__descriptor">Basic Service · Storage Customers Only</p>
+              </div>
+            </div>
+            <div class="sp-panel__content">
+              <div class="sp-steps">
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>1</span></div>
+                  <div class="sp-step__body">
+                    <strong>Assessment</strong>
+                    <p>We assess your vehicle's condition and discuss what's needed.</p>
+                  </div>
+                </div>
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>2</span></div>
+                  <div class="sp-step__body">
+                    <strong>Scheduling</strong>
+                    <p>Work is scheduled and completed while your vehicle is in storage.</p>
+                  </div>
+                </div>
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>3</span></div>
+                  <div class="sp-step__body">
+                    <strong>Updates</strong>
+                    <p>We contact you with any findings or questions before proceeding.</p>
+                  </div>
+                </div>
+                <div class="sp-step sp-step--last">
+                  <div class="sp-step__marker"><span>4</span></div>
+                  <div class="sp-step__body">
+                    <strong>Completion</strong>
+                    <p>Work completed and documented before your seasonal pickup.</p>
+                  </div>
+                </div>
+              </div>
 
-          <div class="accordion-item">
-            <dt>
-              <button class="accordion-trigger faq-trigger" aria-expanded="false">
-                Can I access my vehicle any time?
-                <span class="faq-icon" aria-hidden="true">+</span>
-              </button>
-            </dt>
-            <dd class="accordion-body faq-body">
-              <p>Yes — we offer 24/7 access year-round. No need to call ahead for routine access.</p>
-            </dd>
-          </div>
+              <div class="sp-details">
+                <div class="sp-details__pricing">
+                  <p class="sp-details__label">Pricing</p>
+                  <p class="sp-details__main-price">Contact for Quote</p>
+                  <p class="sp-details__range">Basic tune-ups from $50 — larger repairs quoted individually</p>
+                </div>
+                <div class="sp-details__meta">
+                  <p><span class="sp-details__meta-label">Best for:</span> Minor mechanical issues or seasonal tune-ups between storage periods</p>
+                  <p><span class="sp-details__meta-label">What to expect:</span> Convenient — your vehicle gets serviced while it's already here</p>
+                </div>
+                <a href="contact.html" class="sp-details__cta">Request a Quote →</a>
+              </div>
+            </div>
+          </section>
 
-          <div class="accordion-item">
-            <dt>
-              <button class="accordion-trigger faq-trigger" aria-expanded="false">
-                How much notice do you need for pickup or drop-off service?
-                <span class="faq-icon" aria-hidden="true">+</span>
-              </button>
-            </dt>
-            <dd class="accordion-body faq-body">
-              <p>We ask for at least a few days notice so we can schedule your pickup or drop-off properly. Contact us as early as possible at the start and end of season.</p>
-            </dd>
-          </div>
+          <hr class="sp-panel-divider" aria-hidden="true" />
 
-          <div class="accordion-item">
-            <dt>
-              <button class="accordion-trigger faq-trigger" aria-expanded="false">
-                What vehicles do you not accept?
-                <span class="faq-icon" aria-hidden="true">+</span>
-              </button>
-            </dt>
-            <dd class="accordion-body faq-body">
-              <p>We do not store standard passenger cars, fifth wheels, or items that are easily damaged by an unheated environment. Not sure if your vehicle qualifies? Give us a call.</p>
-            </dd>
-          </div>
+          <!-- ── PANEL 6: Pickup & Drop-Off ── -->
+          <section class="sp-panel sp-panel--even" id="panel-pickup" aria-labelledby="panel-pickup-title">
+            <div class="sp-panel__top">
+              <span class="sp-panel__num" aria-hidden="true">06</span>
+              <div class="sp-panel__heading">
+                <h2 id="panel-pickup-title">Pickup &amp; Drop-Off</h2>
+                <p class="sp-panel__descriptor">Included with Every Storage Plan</p>
+              </div>
+            </div>
+            <div class="sp-panel__content">
+              <div class="sp-steps">
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>1</span></div>
+                  <div class="sp-step__body">
+                    <strong>Schedule</strong>
+                    <p>Contact us a few days before you need pickup or delivery.</p>
+                  </div>
+                </div>
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>2</span></div>
+                  <div class="sp-step__body">
+                    <strong>We Come to You</strong>
+                    <p>We arrive at your location with the right equipment to haul your vehicle.</p>
+                  </div>
+                </div>
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>3</span></div>
+                  <div class="sp-step__body">
+                    <strong>Transport</strong>
+                    <p>Your vehicle is safely transported to or from our facility.</p>
+                  </div>
+                </div>
+                <div class="sp-step sp-step--last">
+                  <div class="sp-step__marker"><span>4</span></div>
+                  <div class="sp-step__body">
+                    <strong>Confirmation</strong>
+                    <p>We confirm arrival and condition at both ends of the trip.</p>
+                  </div>
+                </div>
+              </div>
 
-          <div class="accordion-item">
-            <dt>
-              <button class="accordion-trigger faq-trigger" aria-expanded="false">
-                Are your add-on services available without a storage plan?
-                <span class="faq-icon" aria-hidden="true">+</span>
-              </button>
-            </dt>
-            <dd class="accordion-body faq-body">
-              <p>No — our services are available exclusively to current Boats Galore storage customers.</p>
-            </dd>
-          </div>
+              <div class="sp-details">
+                <div class="sp-details__pricing">
+                  <p class="sp-details__label">Pricing</p>
+                  <p class="sp-details__main-price sp-details__main-price--included">Included — $0 additional cost</p>
+                </div>
+                <div class="sp-details__meta">
+                  <p><span class="sp-details__meta-label">Best for:</span> Anyone who doesn't want the hassle of trailering at season start and end</p>
+                  <p><span class="sp-details__meta-label">What to expect:</span> Give us a few days notice and we handle the rest</p>
+                </div>
+                <a href="contact.html" class="sp-details__cta">Get Started →</a>
+              </div>
+            </div>
+          </section>
 
-          <div class="accordion-item">
-            <dt>
-              <button class="accordion-trigger faq-trigger" aria-expanded="false">
-                How do I get started?
-                <span class="faq-icon" aria-hidden="true">+</span>
-              </button>
-            </dt>
-            <dd class="accordion-body faq-body">
-              <p>Fill out our <a href="contact.html">contact form</a> or give us a call and we'll get back to you within 24 hours to discuss availability and get you set up.</p>
-            </dd>
-          </div>
+          <hr class="sp-panel-divider" aria-hidden="true" />
 
-        </dl>
+          <!-- ── PANEL 7: Custom Requests ── -->
+          <section class="sp-panel sp-panel--odd" id="panel-custom" aria-labelledby="panel-custom-title">
+            <div class="sp-panel__top">
+              <span class="sp-panel__num" aria-hidden="true">07</span>
+              <div class="sp-panel__heading">
+                <h2 id="panel-custom-title">Custom Requests</h2>
+                <p class="sp-panel__descriptor">Something Specific · Let's Talk</p>
+              </div>
+            </div>
+            <div class="sp-panel__content">
+              <div class="sp-steps">
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>1</span></div>
+                  <div class="sp-step__body">
+                    <strong>Reach Out</strong>
+                    <p>Call or email us with what you have in mind.</p>
+                  </div>
+                </div>
+                <div class="sp-step">
+                  <div class="sp-step__marker"><span>2</span></div>
+                  <div class="sp-step__body">
+                    <strong>We'll Assess</strong>
+                    <p>If we can accommodate it, we'll give you a straight answer and a quote.</p>
+                  </div>
+                </div>
+                <div class="sp-step sp-step--last">
+                  <div class="sp-step__marker"><span>3</span></div>
+                  <div class="sp-step__body">
+                    <strong>Get It Done</strong>
+                    <p>We handle it while your vehicle is in our care.</p>
+                  </div>
+                </div>
+              </div>
 
-      </div>
-    </section>
+              <div class="sp-details">
+                <div class="sp-details__pricing">
+                  <p class="sp-details__label">Pricing</p>
+                  <p class="sp-details__main-price">Contact for Quote</p>
+                </div>
+                <div class="sp-details__meta">
+                  <p><span class="sp-details__meta-label">Best for:</span> Anything not covered above — ask and we'll figure it out</p>
+                  <p><span class="sp-details__meta-label">What to expect:</span> An honest answer about whether we can help and what it costs</p>
+                </div>
+                <a href="contact.html" class="sp-details__cta">Get in Touch →</a>
+              </div>
+            </div>
+          </section>
+
+        </div><!-- /sp-panels -->
+
+      </div><!-- /sp-inner -->
+    </div><!-- /sp-outer -->
 
 
     <!-- ============================================================
          BOTTOM CTA
          ============================================================ -->
-    <section class="svc-cta" aria-labelledby="svc-cta-heading">
-      <div class="container svc-cta__inner">
-        <h2 id="svc-cta-heading" class="svc-cta__headline">Ready to Store With Us?</h2>
-        <p class="svc-cta__sub">Reach out today and we'll get back to you within 24 hours.</p>
-        <a href="contact.html" class="svc-cta__btn">Reserve Your Spot →</a>
+    <section class="sp-cta" aria-labelledby="sp-cta-heading">
+      <div class="container sp-cta__inner">
+        <h2 id="sp-cta-heading" class="sp-cta__headline">Ready to Get Started?</h2>
+        <p class="sp-cta__sub">Reach out today and we'll get back to you within 24 hours.</p>
+        <a href="contact.html" class="sp-cta__btn">Reserve Your Spot →</a>
       </div>
     </section>
 
@@ -424,9 +609,58 @@
     </div>
   </footer>
 
+
   <script src="script.js"></script>
   <script>
     document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // ---- Sidebar active link via IntersectionObserver ----
+    (function () {
+      var panels  = document.querySelectorAll('.sp-panel');
+      var links   = document.querySelectorAll('.sp-sidebar__link');
+      if (!panels.length || !links.length) return;
+
+      function setActive(id) {
+        links.forEach(function (l) {
+          var isActive = l.getAttribute('href') === '#' + id;
+          l.classList.toggle('sp-sidebar__link--active', isActive);
+        });
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
+
+      panels.forEach(function (p) { observer.observe(p); });
+    })();
+
+    // ---- Panel scroll-in animation (desktop only) ----
+    (function () {
+      if (window.matchMedia('(max-width: 899px)').matches) return;
+
+      var panels = document.querySelectorAll('.sp-panel');
+      panels.forEach(function (p) {
+        p.style.opacity  = '0';
+        p.style.transform = 'translateY(20px)';
+        p.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      });
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity   = '1';
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+
+      panels.forEach(function (p) { observer.observe(p); });
+    })();
   </script>
 
 </body>
