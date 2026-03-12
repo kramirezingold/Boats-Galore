@@ -450,6 +450,12 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
     padding: 0.5rem 1.1rem;
     border-bottom: none;
   }
+
+  /* When nav-cta is also the active page, keep text navy (gold-on-gold = invisible) */
+  .nav-links a.nav-cta.nav-active {
+    color: var(--navy);
+    border-bottom-color: transparent;
+  }
 }
 
 
@@ -1899,7 +1905,7 @@ footer {
 .contact-info__value a {
   color: var(--navy);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .contact-info__value a:hover {
