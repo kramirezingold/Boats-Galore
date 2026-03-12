@@ -120,6 +120,36 @@ address {
   color: rgba(250, 250, 248, 0.72);
 }
 
+/* Shared eyebrow label — used across all sections */
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.85rem;
+}
+
+/* On warm-light backgrounds (testimonials) */
+.eyebrow-light {
+  color: var(--gold-dark);
+}
+
+/* On gold background (CTA banner) */
+.eyebrow-dark {
+  color: rgba(10, 22, 40, 0.65);
+}
+
+/* Shared thin gold rule between headline and body — used across sections */
+.section-divider {
+  width: 52px;
+  height: 2px;
+  background-color: var(--gold);
+  border-radius: 1px;
+  margin: 1.25rem 0 1.5rem;
+}
+
 .hide-mobile {
   display: none;
 }
@@ -1020,6 +1050,12 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
 .pricing.section-navy {
   padding: var(--section-pad);
   text-align: center;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.pricing .section-divider {
+  margin-inline: auto;
 }
 
 .pricing-grid {
@@ -1108,7 +1144,7 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
    TESTIMONIALS
    ------------------------------------------------------------ */
 .testimonials {
-  background-color: var(--white);
+  background-color: #f5f0e8;
 }
 
 .testimonials-grid {
@@ -1117,10 +1153,15 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
 }
 
 .testimonial-card {
-  background-color: var(--bg-alt);
-  border-left: 4px solid var(--gold);
-  border-radius: var(--radius-lg);
-  padding: 1.75rem 1.5rem;
+  background-color: #ede8dc;
+  border-left: 3px solid var(--gold);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  padding: 2rem 1.75rem;
+  transition: background-color 0.2s;
+}
+
+.testimonial-card:hover {
+  background-color: #e5dfd0;
 }
 
 .testimonial-card blockquote {
@@ -1131,14 +1172,15 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
   font-size: 1rem;
   color: var(--text);
   font-style: italic;
-  margin-bottom: 1rem;
-  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
 }
 
 .testimonial-card blockquote footer {
-  /* reset browser default blockquote footer styles */
   background: none;
   padding: 0;
+  border-top: 1px solid rgba(10, 22, 40, 0.08);
+  padding-top: 1rem;
 }
 
 .testimonial-card cite {
@@ -1167,22 +1209,29 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
    ------------------------------------------------------------ */
 .cta-banner {
   background-color: var(--gold);
-  padding: 4rem 1.25rem;
+  padding: 5rem 1.25rem;
   text-align: center;
+}
+
+.cta-banner-inner .eyebrow-dark {
+  margin-bottom: 1rem;
 }
 
 .cta-banner-inner h2 {
   color: var(--navy);
-  margin-bottom: 0.75rem;
-  font-size: clamp(1.4rem, 3.5vw, 2.25rem);
+  margin-bottom: 0;
+  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  line-height: 1.2;
 }
 
 .cta-banner-inner p {
-  color: rgba(10, 22, 40, 0.75);
-  max-width: 560px;
+  color: rgba(10, 22, 40, 0.72);
+  max-width: 520px;
   margin-inline: auto;
-  margin-bottom: 2rem;
+  margin-top: 1.25rem;
+  margin-bottom: 2.25rem;
   font-size: 1.05rem;
+  line-height: 1.7;
 }
 
 
@@ -1191,6 +1240,8 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
    ------------------------------------------------------------ */
 footer {
   background-color: var(--navy);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
   color: rgba(250,250,248,0.75);
   font-size: 0.9rem;
 }
@@ -1201,12 +1252,45 @@ footer {
   padding-block: 3.5rem;
 }
 
+/* Footer logo row — mirrors navbar logo layout */
+.footer-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.6rem;
+}
+
+.footer-logo-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--gold);
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.footer-logo-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
 .footer-logo {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   color: var(--white);
-  margin-bottom: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+/* Thin gold rule below the logo name */
+.footer-logo-divider {
+  width: 40px;
+  height: 2px;
+  background-color: var(--gold);
+  border-radius: 1px;
+  margin-bottom: 1rem;
+  opacity: 0.7;
 }
 
 .footer-col address,
