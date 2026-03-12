@@ -1405,66 +1405,161 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
 
 
 /* ------------------------------------------------------------
-   TESTIMONIALS
+   REVIEWS CAROUSEL
    ------------------------------------------------------------ */
-.testimonials {
+.reviews {
   background-color: #f5f0e8;
+  text-align: center;
 }
 
-.testimonials-grid {
-  display: grid;
-  gap: 1.5rem;
+.reviews-divider {
+  margin-inline: auto;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
-.testimonial-card {
-  background-color: #ede8dc;
-  border-left: 3px solid var(--gold);
-  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
-  padding: 2rem 1.75rem;
-  transition: background-color 0.2s;
+.reviews h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 2.5rem;
 }
 
-.testimonial-card:hover {
-  background-color: #e5dfd0;
+/* ---- Carousel outer shell ---- */
+.rev-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-.testimonial-card blockquote {
+/* ---- Track outer: clips overflow ---- */
+.rev-track-outer {
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ---- Sliding track ---- */
+.rev-track {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0.5rem 0 1rem;
+  margin: 0;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+/* ---- Individual review card ---- */
+.rev-card {
+  flex: 0 0 calc((100% - 2 * 1.25rem) / 3);
+  background-color: #0f1e38;
+  border: 1px solid rgba(184, 150, 62, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .rev-card {
+    flex: 0 0 100%;
+  }
+}
+
+.rev-stars {
+  color: var(--gold);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.rev-card blockquote {
+  margin: 0;
+  flex: 1;
+}
+
+.rev-card blockquote p {
+  font-size: 1.05rem;
+  color: rgba(250, 250, 248, 0.9);
+  font-style: italic;
+  line-height: 1.7;
   margin: 0;
 }
 
-.testimonial-card blockquote p {
-  font-size: 1rem;
-  color: var(--text);
-  font-style: italic;
-  margin-bottom: 1.25rem;
-  line-height: 1.75;
+.rev-author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(184, 150, 62, 0.15);
 }
 
-.testimonial-card blockquote footer {
-  background: none;
-  padding: 0;
-  border-top: 1px solid rgba(10, 22, 40, 0.08);
-  padding-top: 1rem;
-}
-
-.testimonial-card cite {
-  font-style: normal;
+.rev-name {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 0.88rem;
+  font-size: 0.95rem;
+  color: var(--white);
+}
+
+.rev-location {
+  font-size: 0.8rem;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+}
+
+/* ---- Arrow buttons ---- */
+.rev-arrow {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(10, 22, 40, 0.2);
+  background-color: var(--white);
   color: var(--navy);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  padding: 0;
 }
 
-.cite-vehicle {
-  color: var(--text-light);
-  font-weight: 400;
-  font-family: var(--font-body);
+.rev-arrow svg {
+  width: 18px;
+  height: 18px;
 }
 
-@media (min-width: 768px) {
-  .testimonials-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.rev-arrow:hover {
+  background-color: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+}
+
+/* ---- Dot indicators ---- */
+.rev-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.rev-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(10, 22, 40, 0.2);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.rev-dot.active {
+  background-color: var(--gold);
+  transform: scale(1.3);
 }
 
 

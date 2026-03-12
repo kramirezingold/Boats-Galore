@@ -95,6 +95,150 @@
 })();
 
 
+// ---- Reviews Carousel ----
+// Shows 3 cards on desktop, 1 on mobile.
+// Infinite loop: clones first/last cards so wrap feels seamless.
+(function () {
+  const track      = document.querySelector('.rev-track');
+  const dotsEl     = document.querySelector('.rev-dots');
+  const prevBtn    = document.querySelector('.rev-arrow--prev');
+  const nextBtn    = document.querySelector('.rev-arrow--next');
+  if (!track || !dotsEl) return;
+
+  const cards      = Array.from(track.querySelectorAll('.rev-card'));
+  const total      = cards.length; // 8 real cards
+
+  // How many visible at once depends on viewport
+  function perView() {
+    return window.innerWidth >= 768 ? 3 : 1;
+  }
+
+  // Clone first N and last N cards for infinite wrap
+  function buildClones() {
+    const n = 3; // max perView
+    // Prepend clones of last N cards
+    for (let i = total - 1; i >= total - n; i--) {
+      const clone = cards[i].cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      track.prepend(clone);
+    }
+    // Append clones of first N cards
+    for (let i = 0; i < n; i++) {
+      const clone = cards[i].cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      track.append(clone);
+    }
+  }
+  buildClones();
+
+  const CLONES_BEFORE = 3;
+  let current = 0; // index into real cards (0–7)
+  let isTransitioning = false;
+
+  // Build dots
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('button');
+    dot.className = 'rev-dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Go to review ' + (i + 1));
+    dot.setAttribute('role', 'tab');
+    dot.dataset.index = i;
+    dotsEl.appendChild(dot);
+  }
+  const dots = Array.from(dotsEl.querySelectorAll('.rev-dot'));
+
+  function cardWidth() {
+    const allCards = track.querySelectorAll('.rev-card');
+    if (!allCards.length) return 0;
+    const style  = getComputedStyle(track);
+    const gap    = parseFloat(style.gap) || 20;
+    return allCards[0].getBoundingClientRect().width + gap;
+  }
+
+  // Jump to a track position (real index) without animation
+  function jumpTo(realIndex) {
+    track.style.transition = 'none';
+    const offset = (CLONES_BEFORE + realIndex) * cardWidth();
+    track.style.transform = 'translateX(-' + offset + 'px)';
+    // Force reflow so next transition fires
+    track.offsetHeight;
+    track.style.transition = '';
+  }
+
+  // Slide to real card index with animation
+  function goTo(index, animate) {
+    if (animate === false) { jumpTo(index); return; }
+    if (isTransitioning) return;
+    isTransitioning = true;
+
+    current = index;
+    const offset = (CLONES_BEFORE + current) * cardWidth();
+    track.style.transform = 'translateX(-' + offset + 'px)';
+
+    // Update dots
+    dots.forEach(function (d, i) {
+      d.classList.toggle('active', i === ((current % total) + total) % total);
+    });
+  }
+
+  // After transition ends, silently jump if we've entered clone territory
+  track.addEventListener('transitionend', function () {
+    isTransitioning = false;
+    const n = perView();
+    if (current < 0) {
+      current = total - n;
+      jumpTo(current);
+    } else if (current > total - n) {
+      current = 0;
+      jumpTo(current);
+    }
+    // Re-sync dots after jump
+    const active = ((current % total) + total) % total;
+    dots.forEach(function (d, i) { d.classList.toggle('active', i === active); });
+  });
+
+  // Init position (no animation)
+  goTo(0, false);
+
+  // Auto-advance
+  let timer = setInterval(advance, 4000);
+  function advance() { goTo(current + 1, true); }
+
+  nextBtn && nextBtn.addEventListener('click', function () {
+    clearInterval(timer);
+    goTo(current + 1, true);
+    timer = setInterval(advance, 4000);
+  });
+
+  prevBtn && prevBtn.addEventListener('click', function () {
+    clearInterval(timer);
+    goTo(current - 1, true);
+    timer = setInterval(advance, 4000);
+  });
+
+  dots.forEach(function (dot) {
+    dot.addEventListener('click', function () {
+      clearInterval(timer);
+      goTo(parseInt(this.dataset.index, 10), true);
+      timer = setInterval(advance, 4000);
+    });
+  });
+
+  // Pause on hover
+  const carousel = document.querySelector('.rev-carousel');
+  if (carousel) {
+    carousel.addEventListener('mouseenter', function () { clearInterval(timer); });
+    carousel.addEventListener('mouseleave', function () { timer = setInterval(advance, 4000); });
+  }
+
+  // Recalculate on resize
+  let resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () { jumpTo(current); }, 150);
+  });
+})();
+
+
 // ---- Tab Switcher (Storage Rates / Our Services) ----
 // Fades the active panel out, swaps hidden attribute, fades new panel in.
 // Re-triggers card entrance animations by cloning and replacing the list.
