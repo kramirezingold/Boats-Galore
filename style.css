@@ -984,13 +984,19 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
 @media (min-width: 768px) {
   .vehicles-layout {
     grid-template-columns: 3fr 2fr;
-    align-items: stretch;
+    align-items: center;
   }
 
   .carousel {
-    aspect-ratio: unset;
-    height: 100%;
-    min-height: 460px;
+    /* Restore 16:9 ratio so height is fixed and independent of accordion */
+    aspect-ratio: 16 / 9;
+    height: auto;
+    min-height: unset;
+    /* Float it with margin — reduces visual size by ~25% and adds breathing room */
+    margin: 3rem 1.5rem 3rem 2.5rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(10, 22, 40, 0.18), 0 2px 8px rgba(10, 22, 40, 0.08);
   }
 
   .vehicles-content {
