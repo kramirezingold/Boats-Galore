@@ -11,7 +11,7 @@
   <!-- Google Fonts: Raleway for headlines, DM Sans for body -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&family=DM+Sans:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 
@@ -407,44 +407,191 @@
 
 
     <!-- ============================================================
-         5. PRICING TEASER
+         5. STORAGE & SERVICES (tab switcher)
          ============================================================ -->
-    <section class="pricing section section-navy" aria-labelledby="pricing-heading">
+    <section class="offers section" id="offers" aria-labelledby="offers-heading">
       <div class="container">
-        <p class="eyebrow">Storage Rates</p>
-        <h2 id="pricing-heading">Flexible Pricing for Every Vehicle</h2>
+
+        <p class="eyebrow">Pricing &amp; Services</p>
+        <h2 id="offers-heading">What We Offer</h2>
         <div class="section-divider" aria-hidden="true"></div>
-        <p class="section-sub section-sub-light">Storage rates based on vehicle size and duration. No hidden fees.</p>
+        <p class="section-sub section-sub-light">Indoor barn storage with 24/7 access. Pickup &amp; drop-off included with every storage plan.</p>
 
-        <ul class="pricing-grid" role="list">
+        <!-- Tab switcher buttons -->
+        <div class="tab-switcher" role="tablist" aria-label="Storage rates and services">
+          <button
+            class="tab-btn tab-btn--active"
+            role="tab"
+            aria-selected="true"
+            aria-controls="tab-rates"
+            id="tab-btn-rates"
+            data-tab="rates"
+          >Storage Rates</button>
+          <button
+            class="tab-btn"
+            role="tab"
+            aria-selected="false"
+            aria-controls="tab-services"
+            id="tab-btn-services"
+            data-tab="services"
+          >Our Services</button>
+        </div>
 
-          <li class="pricing-card">
-            <h3>Small</h3>
-            <p class="pricing-vehicles">Snowmobiles, ATVs, Jet Skis</p>
-            <p class="pricing-rate">[TBD] / month</p>
-            <p class="pricing-season">or [TBD] / season</p>
-          </li>
+        <!-- ── TAB 1: Storage Rates ── -->
+        <div class="tab-panel tab-panel--active" id="tab-rates" role="tabpanel" aria-labelledby="tab-btn-rates">
 
-          <li class="pricing-card pricing-card-featured">
-            <span class="pricing-badge">Most Popular</span>
-            <h3>Medium</h3>
-            <p class="pricing-vehicles">Boats up to 24 ft, Small Trailers</p>
-            <p class="pricing-rate">[TBD] / month</p>
-            <p class="pricing-season">or [TBD] / season</p>
-          </li>
+          <ul class="rate-grid" role="list">
 
-          <li class="pricing-card">
-            <h3>Large</h3>
-            <p class="pricing-vehicles">Boats 24 ft+, RVs, Large Trailers</p>
-            <p class="pricing-rate">[TBD] / month</p>
-            <p class="pricing-season">or [TBD] / season</p>
-          </li>
+            <!-- Card 1: Small -->
+            <li class="rate-card" style="--stagger: 0ms">
+              <div class="rate-card__top">
+                <h3 class="rate-card__name">Small</h3>
+                <p class="rate-card__desc">Snowmobiles, ATVs &amp; Jet Skis</p>
+              </div>
+              <hr class="rate-card__divider" aria-hidden="true" />
+              <div class="rate-card__bottom">
+                <div>
+                  <span class="rate-card__price">$199</span>
+                  <span class="rate-card__sublabel">/season · Oct–Apr</span>
+                </div>
+                <a href="contact.html" class="rate-card__cta">Get Started →</a>
+              </div>
+            </li>
 
-        </ul>
+            <!-- Card 2: Medium -->
+            <li class="rate-card" style="--stagger: 100ms">
+              <div class="rate-card__top">
+                <h3 class="rate-card__name">Medium</h3>
+                <p class="rate-card__desc">Boats up to 22ft &amp; Small Trailers</p>
+              </div>
+              <hr class="rate-card__divider" aria-hidden="true" />
+              <div class="rate-card__bottom">
+                <div>
+                  <span class="rate-card__price">$349</span>
+                  <span class="rate-card__sublabel">/season · Oct–Apr</span>
+                </div>
+                <a href="contact.html" class="rate-card__cta">Get Started →</a>
+              </div>
+            </li>
 
-        <!-- OWNER: Confirm actual rates before launch -->
-        <p class="pricing-note">Pricing varies by vehicle size and storage duration. Contact us for a personalized quote.</p>
-        <a href="services.html" class="btn btn-gold">View Full Pricing &amp; Services</a>
+            <!-- Card 3: Large -->
+            <li class="rate-card" style="--stagger: 200ms">
+              <div class="rate-card__top">
+                <h3 class="rate-card__name">Large</h3>
+                <p class="rate-card__desc">Boats 22–30ft &amp; Larger Trailers</p>
+              </div>
+              <hr class="rate-card__divider" aria-hidden="true" />
+              <div class="rate-card__bottom">
+                <div>
+                  <span class="rate-card__price">$499</span>
+                  <span class="rate-card__sublabel">/season · Oct–Apr</span>
+                </div>
+                <a href="contact.html" class="rate-card__cta">Get Started →</a>
+              </div>
+            </li>
+
+            <!-- Card 4: Extra Large -->
+            <li class="rate-card rate-card--xl" style="--stagger: 300ms">
+              <div class="rate-card__top">
+                <h3 class="rate-card__name">Extra Large</h3>
+                <p class="rate-card__desc">Boats 30ft+ &amp; RVs</p>
+              </div>
+              <hr class="rate-card__divider" aria-hidden="true" />
+              <div class="rate-card__bottom">
+                <div>
+                  <span class="rate-card__price rate-card__price--quote">Custom Quote</span>
+                </div>
+                <a href="contact.html" class="btn btn-outline-gold rate-card__quote-btn">Request a Quote →</a>
+              </div>
+            </li>
+
+          </ul>
+
+          <!-- Perks strip -->
+          <div class="perks-strip" role="list" aria-label="Included with all plans">
+            <div class="perks-strip__item" role="listitem">
+              <span class="perks-strip__check" aria-hidden="true">✓</span> Pickup &amp; drop-off included
+            </div>
+            <div class="perks-strip__item" role="listitem">
+              <span class="perks-strip__check" aria-hidden="true">✓</span> 24/7 access year-round
+            </div>
+            <div class="perks-strip__item" role="listitem">
+              <span class="perks-strip__check" aria-hidden="true">✓</span> New customers welcome
+            </div>
+          </div>
+
+        </div><!-- /tab-rates -->
+
+        <!-- ── TAB 2: Our Services ── -->
+        <div class="tab-panel" id="tab-services" role="tabpanel" aria-labelledby="tab-btn-services" hidden>
+
+          <ul class="svc-grid" role="list">
+
+            <!-- Service 1: Winterization -->
+            <li class="svc-card" style="--stagger: 0ms">
+              <div class="svc-card__icon" aria-hidden="true">🧊</div>
+              <h3 class="svc-card__name">Winterization</h3>
+              <p class="svc-card__desc">Engine fogging, fluid draining &amp; full off-season prep</p>
+              <span class="svc-card__price">Call for Quote</span>
+              <a href="contact.html" class="svc-card__cta">Contact Us →</a>
+            </li>
+
+            <!-- Service 2: Cleaning & Wash -->
+            <li class="svc-card" style="--stagger: 100ms">
+              <div class="svc-card__icon" aria-hidden="true">🚿</div>
+              <h3 class="svc-card__name">Cleaning &amp; Wash</h3>
+              <p class="svc-card__desc">Full exterior wash and bottom cleaning before or after storage</p>
+              <!-- TODO: confirm price -->
+              <span class="svc-card__price">$[TBD]</span>
+              <a href="contact.html" class="svc-card__cta">Contact Us →</a>
+            </li>
+
+            <!-- Service 3: Shrink Wrap -->
+            <li class="svc-card" style="--stagger: 200ms">
+              <div class="svc-card__icon" aria-hidden="true">📦</div>
+              <h3 class="svc-card__name">Shrink Wrap</h3>
+              <p class="svc-card__desc">Pro wrap protection between seasons</p>
+              <!-- TODO: confirm price -->
+              <span class="svc-card__price">$[TBD]</span>
+              <a href="contact.html" class="svc-card__cta">Contact Us →</a>
+            </li>
+
+            <!-- Service 4: Maintenance & Repair -->
+            <li class="svc-card" style="--stagger: 0ms">
+              <div class="svc-card__icon" aria-hidden="true">🔧</div>
+              <h3 class="svc-card__name">Maintenance &amp; Repair</h3>
+              <p class="svc-card__desc">Basic mechanical work and seasonal tune-ups</p>
+              <span class="svc-card__price">Call for Quote</span>
+              <a href="contact.html" class="svc-card__cta">Contact Us →</a>
+            </li>
+
+            <!-- Service 5: Pickup & Drop-Off -->
+            <li class="svc-card" style="--stagger: 100ms">
+              <div class="svc-card__icon" aria-hidden="true">🚚</div>
+              <h3 class="svc-card__name">Pickup &amp; Drop-Off</h3>
+              <p class="svc-card__desc">We come to you — just give us a few days notice</p>
+              <span class="svc-card__price svc-card__price--included">Included with Storage</span>
+              <a href="contact.html" class="svc-card__cta">Contact Us →</a>
+            </li>
+
+            <!-- Service 6: Custom Requests -->
+            <li class="svc-card" style="--stagger: 200ms">
+              <div class="svc-card__icon" aria-hidden="true">📋</div>
+              <h3 class="svc-card__name">Custom Requests</h3>
+              <p class="svc-card__desc">Have something specific in mind? Give us a call</p>
+              <span class="svc-card__price">Call for Quote</span>
+              <a href="contact.html" class="svc-card__cta">Contact Us →</a>
+            </li>
+
+          </ul>
+
+        </div><!-- /tab-services -->
+
+        <!-- Bottom CTA — always visible -->
+        <div class="offers-cta">
+          <a href="contact.html" class="btn btn-gold offers-cta__btn">Reserve Your Spot →</a>
+        </div>
+
       </div>
     </section>
 

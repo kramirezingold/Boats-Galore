@@ -95,6 +95,51 @@
 })();
 
 
+// ---- Tab Switcher (Storage Rates / Our Services) ----
+// Fades the active panel out, swaps hidden attribute, fades new panel in.
+// Re-triggers card entrance animations by cloning and replacing the list.
+(function () {
+  const buttons = document.querySelectorAll('.tab-btn');
+  if (!buttons.length) return;
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const targetId = this.dataset.tab;
+      const targetPanel = document.getElementById('tab-' + targetId);
+      const activePanel = document.querySelector('.tab-panel--active');
+
+      if (targetPanel === activePanel) return;
+
+      // Update button states
+      buttons.forEach(function (b) {
+        b.classList.remove('tab-btn--active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      this.classList.add('tab-btn--active');
+      this.setAttribute('aria-selected', 'true');
+
+      // Fade out current panel
+      activePanel.classList.add('tab-fading');
+
+      setTimeout(function () {
+        activePanel.classList.remove('tab-panel--active', 'tab-fading');
+        activePanel.hidden = true;
+
+        // Re-trigger card animations by resetting animation on cards
+        targetPanel.querySelectorAll('.rate-card, .svc-card').forEach(function (card) {
+          card.style.animation = 'none';
+          card.offsetHeight; // reflow
+          card.style.animation = '';
+        });
+
+        targetPanel.hidden = false;
+        targetPanel.classList.add('tab-panel--active');
+      }, 300);
+    });
+  });
+})();
+
+
 // ---- Accordion ----
 (function () {
   document.querySelectorAll('.accordion-trigger').forEach(function (trigger) {
