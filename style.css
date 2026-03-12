@@ -44,9 +44,11 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
+  overflow-x: hidden;
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.65;
@@ -523,10 +525,15 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
   margin-bottom: 1.5rem;
 }
 
-/* Each span = one line, no internal wrapping */
+/* Each span = one line, no internal wrapping (desktop only) */
 .hero-content h1 span {
   display: block;
-  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  .hero-content h1 span {
+    white-space: nowrap;
+  }
 }
 
 /* Thin gold decorative rule between H1 and subheadline */
@@ -776,7 +783,6 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
 .features .section-sub {
   color: var(--text-light);
   max-width: none;
-  white-space: nowrap;
 }
 
 .features-grid {
@@ -2995,7 +3001,12 @@ footer {
   color: var(--white);
   line-height: 1.2;
   margin: 0;
-  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .ab-hero__headline {
+    white-space: nowrap;
+  }
 }
 
 
