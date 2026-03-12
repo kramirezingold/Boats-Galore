@@ -2991,10 +2991,11 @@ footer {
 .ab-hero__headline {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: clamp(2.25rem, 5vw, 3rem);
+  font-size: clamp(1.75rem, 3.6vw, 2.5rem);
   color: var(--white);
   line-height: 1.2;
   margin: 0;
+  white-space: nowrap;
 }
 
 
@@ -3121,7 +3122,7 @@ footer {
   .ab-area__cols {
     flex-direction: row;
     gap: 60px;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .ab-area__copy {
@@ -3181,12 +3182,16 @@ footer {
 /* ---- Section 4: Values Strip ---- */
 .ab-values {
   background-color: var(--navy);
-  padding: 80px 1.25rem;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  padding: 90px 1.25rem;
   text-align: center;
 }
 
 .ab-values__inner {
-  max-width: 900px;
+  max-width: 1100px;
   margin-inline: auto;
 }
 
@@ -3194,36 +3199,83 @@ footer {
   margin-bottom: 3rem;
 }
 
+/* Three cards in a row on desktop */
 .ab-values__statements {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .ab-values__statements {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Each value card */
+.ab-value {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 3px solid var(--gold);
+  border-radius: 4px;
+  padding: 2.5rem 2rem 2.25rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 4px 24px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0;
+  gap: 1.25rem;
 }
 
-.ab-value {
+/* Large decorative quotation mark etched into the card */
+.ab-value::before {
+  content: '\201C';
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--gold);
+  opacity: 0.18;
+  position: absolute;
+  top: 0.75rem;
+  left: 1.25rem;
+  pointer-events: none;
+  user-select: none;
+}
+
+.ab-value__text {
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  line-height: 1.4;
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  line-height: 1.5;
   margin: 0;
-  padding: 0.25rem 0;
+  position: relative; /* sits above ::before */
+  z-index: 1;
 }
 
-.ab-value--white {
+.ab-value--white .ab-value__text {
   color: var(--white);
 }
 
-.ab-value--gold {
+.ab-value--gold .ab-value__text {
   color: var(--gold);
 }
 
+/* Small gold accent line below text */
+.ab-value::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  background-color: var(--gold);
+  opacity: 0.5;
+  border-radius: 2px;
+  margin-top: auto;
+}
+
+/* Hide old dot separator — no longer used */
 .ab-values__dot {
-  font-size: 1.5rem;
-  color: var(--gold);
-  opacity: 0.4;
-  margin: 0.75rem 0;
-  line-height: 1;
+  display: none;
 }
 
 
