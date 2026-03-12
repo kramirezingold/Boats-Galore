@@ -3122,7 +3122,7 @@ footer {
   .ab-area__cols {
     flex-direction: row;
     gap: 60px;
-    align-items: stretch;
+    align-items: center;
   }
 
   .ab-area__copy {
