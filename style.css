@@ -1145,6 +1145,13 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
   }
 }
 
+.rate-grid-note {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  text-align: center;
+}
+
 /* Card entrance animation */
 @keyframes cardIn {
   from {
