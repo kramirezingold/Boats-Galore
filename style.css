@@ -2932,17 +2932,6 @@ footer {
   color: var(--navy);
 }
 
-.sp-radius-note {
-  margin-top: 1.25rem;
-  padding: 0.75rem 1rem;
-  border-left: 3px solid var(--gold);
-  background: #f5f0e8;
-  border-radius: 0 4px 4px 0;
-  font-size: 0.85rem;
-  color: var(--text);
-  line-height: 1.55;
-}
-
 /* ---- Bottom CTA ---- */
 .sp-cta {
   background-color: var(--navy);
