@@ -2938,7 +2938,7 @@ footer {
   border-left: 3px solid var(--gold);
   background: #f5f0e8;
   border-radius: 0 4px 4px 0;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   color: var(--text);
   line-height: 1.55;
 }
