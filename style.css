@@ -1333,7 +1333,18 @@ header.nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) rotat
 
 @media (min-width: 960px) {
   .svc-grid {
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .svc-grid > li {
+    flex: 0 0 auto;
+    width: calc((100% - 2.5rem) / 3);
+  }
+  .svc-grid > li:nth-child(4) {
+    margin-left: auto;
+  }
+  .svc-grid > li:nth-child(5) {
+    margin-right: auto;
   }
 }
 
