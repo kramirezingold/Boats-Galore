@@ -1,0 +1,94 @@
+{
+  "hero_headline_line1": "Indoor Boat & RV Storage",
+  "hero_headline_line2": "in Dowagiac, Michigan",
+  "hero_sub": "Family-owned and trusted by southwest Michigan boat and RV owners for years. Secure indoor storage, call-ahead access, and real people who pick up the phone.",
+  "intro_heading": "Southwest Michigan's Trusted Storage for High Value Vehicles",
+  "intro_p1": "Mike and Leslie Malin have been protecting their neighbors' boats, RVs, and recreational vehicles from Michigan's harsh winters right here in Dowagiac. Conveniently located near Sister Lakes, Boats Galore offers the kind of personalized, reliable service you simply won't find at a big storage chain.",
+  "intro_p2": "Every vehicle goes inside — out of the snow, ice, and UV — in a secure, well-lit facility you can access any time of day or night.",
+  "feature1_title": "Call-Ahead Access",
+  "feature1_desc": "Just call ahead and we'll have your vehicle ready to go.",
+  "feature2_title": "Security Cameras & Lighting",
+  "feature2_desc": "The entire property is monitored and well-lit. We take the safety of your investment seriously — even when you're not here.",
+  "feature3_title": "Faster Than the Competition",
+  "feature3_desc": "When you need your vehicle, you get it quickly. Our streamlined setup means less waiting and more time on the water.",
+  "feature4_title": "Pickup & Drop-Off Service",
+  "feature4_desc": "Can't haul it yourself? We offer convenient pickup and drop-off with a few days advance notice. Just ask.",
+  "trust_stat1_title": "Call-Ahead Access",
+  "trust_stat1_desc": "Just call ahead and we'll have your vehicle ready to go.",
+  "trust_stat2_title": "Secure Facility",
+  "trust_stat2_desc": "Security cameras and lighting protect your investment around the clock.",
+  "trust_stat3_title": "Michigan Winters? No Problem.",
+  "trust_stat3_desc": "Fully indoor storage means your boat stays dry and protected all season.",
+  "rate_small_name": "Small",
+  "rate_small_desc": "Snowmobiles, ATVs & Jet Skis",
+  "rate_small_price": "$349",
+  "rate_medium_name": "Medium",
+  "rate_medium_desc": "Boats up to 20ft & Small Trailers",
+  "rate_medium_price": "$499",
+  "rate_large_name": "Large",
+  "rate_large_desc": "Boats 20–28ft & Larger Trailers",
+  "rate_large_price": "$649",
+  "rate_xl_name": "Extra Large",
+  "rate_xl_desc": "Boats 28ft+ & RVs",
+  "rate_note": "Need storage outside the standard season? Give us a call — we accommodate bookings year round.",
+  "perks": ["Pickup & drop-off included", "Call-Ahead Access", "New customers welcome"],
+  "svc1_name": "Winterization",
+  "svc1_desc": "Engine fogging, fluid draining & full off-season prep",
+  "svc1_price": "$175 – $350",
+  "svc2_name": "Cleaning & Wash",
+  "svc2_desc": "Full exterior wash and bottom cleaning before or after storage",
+  "svc2_price": "$75 – $150",
+  "svc3_name": "Maintenance & Repair",
+  "svc3_desc": "Basic mechanical work and seasonal tune-ups",
+  "svc3_price": "Call for Quote",
+  "svc4_name": "Pickup & Drop-Off",
+  "svc4_desc": "We come to you — just give us a few days notice",
+  "svc4_price": "Included with Storage",
+  "svc5_name": "Custom Requests",
+  "svc5_desc": "Have something specific in mind? Give us a call",
+  "svc5_price": "Call for Quote",
+  "testimonials": [
+    {
+      "quote": "Been storing my pontoon here three winters now. Never had a single issue. The 24/7 access is huge — I've shown up at odd hours and it's always easy in and out.",
+      "name": "Tom H.",
+      "location": "Sister Lakes, MI"
+    },
+    {
+      "quote": "They picked up our boat right from the marina at the end of the season. Didn't have to lift a finger. Worth every penny for the convenience alone.",
+      "name": "Carrie M.",
+      "location": "Dowagiac, MI"
+    },
+    {
+      "quote": "Stored our Sea-Doos and a fishing boat this past winter. Everything came back exactly as we left it. Clean, secure facility.",
+      "name": "Dave & Linda R.",
+      "location": "South Bend, IN"
+    },
+    {
+      "quote": "Finally found a place that actually has room and doesn't make you jump through hoops. Called on a Tuesday, dropped off that Friday.",
+      "name": "Jeff K.",
+      "location": "Niles, MI"
+    },
+    {
+      "quote": "The Malins are great people. You can tell they actually care about the stuff they're storing. My RV came out in perfect condition after six months.",
+      "name": "Susan B.",
+      "location": "Cassopolis, MI"
+    },
+    {
+      "quote": "Pricing is fair and straightforward — no surprise fees. Indoor storage gave me real peace of mind through that brutal winter we had.",
+      "name": "Mark T.",
+      "location": "Granger, IN"
+    },
+    {
+      "quote": "I was nervous storing my boat somewhere new but they were professional from day one. Highly recommend to anyone near the Sister Lakes area.",
+      "name": "Paula W.",
+      "location": "Edwardsburg, MI"
+    },
+    {
+      "quote": "Fast response, fair price, and my boat was ready to go when I needed it in the spring. Simple as it should be.",
+      "name": "Rick G.",
+      "location": "Elkhart, IN"
+    }
+  ],
+  "cta_headline": "Ready to Store Your Vehicle the Right Way?",
+  "cta_p": "Secure indoor storage, call-ahead access, and a team that treats your property like their own. New customers accepted year round."
+}

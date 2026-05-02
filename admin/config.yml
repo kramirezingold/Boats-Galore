@@ -1,0 +1,239 @@
+backend:
+  name: github
+  repo: kramirezingold/Boats-Galore
+  branch: main
+  base_url: https://boats-galore.com
+  auth_endpoint: /api/auth
+
+media_folder: images
+public_folder: /images
+
+collections:
+  - name: site_content
+    label: Website Content
+    files:
+
+      - name: global
+        label: "Global Settings (Phone, Email, Footer)"
+        file: _content/global.json
+        fields:
+          - {label: "Phone Number (displayed)", name: phone, widget: string, hint: "e.g. (269) 782-3090"}
+          - {label: "Phone Link (no spaces/dashes)", name: phone_link, widget: string, hint: "e.g. +12697823090"}
+          - {label: Email Address, name: email, widget: string}
+          - {label: Address — Street, name: address_street, widget: string}
+          - {label: "Address — City, State, Zip", name: address_city, widget: string}
+          - {label: "Footer — Customer Access", name: footer_access, widget: string}
+          - {label: "Footer — New Customers", name: footer_new_customers, widget: string}
+          - {label: "Footer — Pickup & Drop-Off", name: footer_pickup, widget: string}
+          - {label: "Footer — Location Note", name: footer_location, widget: string}
+
+      - name: home
+        label: Home Page
+        file: _content/home.json
+        fields:
+          - {label: "Hero — Headline Line 1", name: hero_headline_line1, widget: string, hint: "⚠️ Affects search rankings"}
+          - {label: "Hero — Headline Line 2", name: hero_headline_line2, widget: string, hint: "⚠️ Affects search rankings"}
+          - {label: "Hero — Subheadline", name: hero_sub, widget: text}
+          - {label: "Intro — Heading", name: intro_heading, widget: string, hint: "⚠️ Affects search rankings"}
+          - {label: "Intro — Paragraph 1", name: intro_p1, widget: text}
+          - {label: "Intro — Paragraph 2", name: intro_p2, widget: text}
+          - {label: "Feature Card 1 — Title", name: feature1_title, widget: string}
+          - {label: "Feature Card 1 — Description", name: feature1_desc, widget: text}
+          - {label: "Feature Card 2 — Title", name: feature2_title, widget: string}
+          - {label: "Feature Card 2 — Description", name: feature2_desc, widget: text}
+          - {label: "Feature Card 3 — Title", name: feature3_title, widget: string}
+          - {label: "Feature Card 3 — Description", name: feature3_desc, widget: text}
+          - {label: "Feature Card 4 — Title", name: feature4_title, widget: string}
+          - {label: "Feature Card 4 — Description", name: feature4_desc, widget: text}
+          - {label: "Why Us — Stat 1 Title", name: trust_stat1_title, widget: string}
+          - {label: "Why Us — Stat 1 Description", name: trust_stat1_desc, widget: text}
+          - {label: "Why Us — Stat 2 Title", name: trust_stat2_title, widget: string}
+          - {label: "Why Us — Stat 2 Description", name: trust_stat2_desc, widget: text}
+          - {label: "Why Us — Stat 3 Title", name: trust_stat3_title, widget: string}
+          - {label: "Why Us — Stat 3 Description", name: trust_stat3_desc, widget: text}
+          - {label: "Rates — Small Name", name: rate_small_name, widget: string}
+          - {label: "Rates — Small Description", name: rate_small_desc, widget: string}
+          - {label: "Rates — Small Price", name: rate_small_price, widget: string}
+          - {label: "Rates — Medium Name", name: rate_medium_name, widget: string}
+          - {label: "Rates — Medium Description", name: rate_medium_desc, widget: string}
+          - {label: "Rates — Medium Price", name: rate_medium_price, widget: string}
+          - {label: "Rates — Large Name", name: rate_large_name, widget: string}
+          - {label: "Rates — Large Description", name: rate_large_desc, widget: string}
+          - {label: "Rates — Large Price", name: rate_large_price, widget: string}
+          - {label: "Rates — Extra Large Name", name: rate_xl_name, widget: string}
+          - {label: "Rates — Extra Large Description", name: rate_xl_desc, widget: string}
+          - {label: "Rates — Footnote", name: rate_note, widget: text}
+          - label: "Perks Strip (included with all plans)"
+            name: perks
+            widget: list
+            field: {label: Perk, name: perk, widget: string}
+          - {label: "Services Tab — Card 1 Name", name: svc1_name, widget: string}
+          - {label: "Services Tab — Card 1 Description", name: svc1_desc, widget: text}
+          - {label: "Services Tab — Card 1 Price", name: svc1_price, widget: string}
+          - {label: "Services Tab — Card 2 Name", name: svc2_name, widget: string}
+          - {label: "Services Tab — Card 2 Description", name: svc2_desc, widget: text}
+          - {label: "Services Tab — Card 2 Price", name: svc2_price, widget: string}
+          - {label: "Services Tab — Card 3 Name", name: svc3_name, widget: string}
+          - {label: "Services Tab — Card 3 Description", name: svc3_desc, widget: text}
+          - {label: "Services Tab — Card 3 Price", name: svc3_price, widget: string}
+          - {label: "Services Tab — Card 4 Name", name: svc4_name, widget: string}
+          - {label: "Services Tab — Card 4 Description", name: svc4_desc, widget: text}
+          - {label: "Services Tab — Card 4 Price", name: svc4_price, widget: string}
+          - {label: "Services Tab — Card 5 Name", name: svc5_name, widget: string}
+          - {label: "Services Tab — Card 5 Description", name: svc5_desc, widget: text}
+          - {label: "Services Tab — Card 5 Price", name: svc5_price, widget: string}
+          - label: Testimonials
+            name: testimonials
+            widget: list
+            fields:
+              - {label: "Quote (no quotation marks needed)", name: quote, widget: text}
+              - {label: Customer Name, name: name, widget: string}
+              - {label: Location, name: location, widget: string}
+          - {label: "CTA Banner — Headline", name: cta_headline, widget: string}
+          - {label: "CTA Banner — Paragraph", name: cta_p, widget: text}
+
+      - name: services
+        label: Services Page
+        file: _content/services.json
+        fields:
+          - {label: Page Subheadline, name: page_sub, widget: text}
+          - {label: Sidebar Note, name: sidebar_note, widget: string}
+
+          - label: "Panel 1 — Seasonal Storage"
+            name: panel_storage
+            widget: object
+            fields:
+              - {label: Descriptor (shown under heading), name: descriptor, widget: string}
+              - label: Process Steps
+                name: steps
+                widget: list
+                fields:
+                  - {label: Step Title, name: title, widget: string}
+                  - {label: Step Description, name: description, widget: text}
+              - {label: "Rate — Small Tier Name", name: rate_small_tier, widget: string}
+              - {label: "Rate — Small Amount", name: rate_small_amount, widget: string}
+              - {label: "Rate — Medium Tier Name", name: rate_medium_tier, widget: string}
+              - {label: "Rate — Medium Amount", name: rate_medium_amount, widget: string}
+              - {label: "Rate — Large Tier Name", name: rate_large_tier, widget: string}
+              - {label: "Rate — Large Amount", name: rate_large_amount, widget: string}
+              - {label: "Rate — Extra Large Tier Name", name: rate_xl_tier, widget: string}
+              - {label: "Rate — Extra Large Amount", name: rate_xl_amount, widget: string, hint: "Use 'Contact for Quote' if no set price"}
+              - {label: Tier Size Notes, name: tier_note, widget: text}
+              - {label: Season Flexibility Note, name: tier_note2, widget: text}
+              - {label: Best For, name: best_for, widget: text}
+              - {label: What to Expect, name: what_to_expect, widget: text}
+
+          - label: "Panel 2 — Winterization"
+            name: panel_winterize
+            widget: object
+            fields:
+              - {label: Descriptor, name: descriptor, widget: string}
+              - label: Process Steps
+                name: steps
+                widget: list
+                fields:
+                  - {label: Step Title, name: title, widget: string}
+                  - {label: Step Description, name: description, widget: text}
+              - {label: Main Price, name: main_price, widget: string}
+              - {label: "Price Range / Note", name: price_range, widget: string}
+              - {label: Best For, name: best_for, widget: text}
+              - {label: What to Expect, name: what_to_expect, widget: text}
+
+          - label: "Panel 3 — Boat Cleaning & Wash"
+            name: panel_wash
+            widget: object
+            fields:
+              - {label: Descriptor, name: descriptor, widget: string}
+              - label: Process Steps
+                name: steps
+                widget: list
+                fields:
+                  - {label: Step Title, name: title, widget: string}
+                  - {label: Step Description, name: description, widget: text}
+              - {label: Main Price, name: main_price, widget: string}
+              - {label: "Price Range / Note", name: price_range, widget: string}
+              - {label: Best For, name: best_for, widget: text}
+              - {label: What to Expect, name: what_to_expect, widget: text}
+
+          - label: "Panel 4 — Maintenance & Repair"
+            name: panel_maintenance
+            widget: object
+            fields:
+              - {label: Descriptor, name: descriptor, widget: string}
+              - label: Process Steps
+                name: steps
+                widget: list
+                fields:
+                  - {label: Step Title, name: title, widget: string}
+                  - {label: Step Description, name: description, widget: text}
+              - {label: Main Price, name: main_price, widget: string}
+              - {label: "Price Range / Note", name: price_range, widget: string}
+              - {label: Best For, name: best_for, widget: text}
+              - {label: What to Expect, name: what_to_expect, widget: text}
+
+          - label: "Panel 5 — Pickup & Drop-Off"
+            name: panel_pickup
+            widget: object
+            fields:
+              - {label: Descriptor, name: descriptor, widget: string}
+              - label: Process Steps
+                name: steps
+                widget: list
+                fields:
+                  - {label: Step Title, name: title, widget: string}
+                  - {label: Step Description, name: description, widget: text}
+              - {label: Main Price, name: main_price, widget: string}
+              - {label: Best For, name: best_for, widget: text}
+              - {label: What to Expect, name: what_to_expect, widget: text}
+              - {label: Service Area Note, name: service_area, widget: text}
+
+          - label: "Panel 6 — Custom Requests"
+            name: panel_custom
+            widget: object
+            fields:
+              - {label: Descriptor, name: descriptor, widget: string}
+              - label: Process Steps
+                name: steps
+                widget: list
+                fields:
+                  - {label: Step Title, name: title, widget: string}
+                  - {label: Step Description, name: description, widget: text}
+              - {label: Main Price, name: main_price, widget: string}
+              - {label: Best For, name: best_for, widget: text}
+              - {label: What to Expect, name: what_to_expect, widget: text}
+
+          - {label: "Bottom CTA — Headline", name: cta_headline, widget: string}
+          - {label: "Bottom CTA — Subtext", name: cta_sub, widget: string}
+
+      - name: about
+        label: About Page
+        file: _content/about.json
+        fields:
+          - {label: Pull Quote (large quote at top), name: pullquote, widget: text}
+          - {label: Story — Paragraph 1, name: story_p1, widget: text}
+          - {label: Story — Paragraph 2, name: story_p2, widget: text}
+          - {label: Story — Paragraph 3, name: story_p3, widget: text}
+          - {label: Area Section Subheadline, name: area_sub, widget: text}
+          - {label: "Area Copy — Paragraph 1", name: area_p1, widget: text}
+          - {label: "Area Copy — Paragraph 2", name: area_p2, widget: text}
+          - {label: "Area Copy — Paragraph 3", name: area_p3, widget: text}
+          - label: Stats (4 numbers on right side)
+            name: stats
+            widget: list
+            fields:
+              - {label: "Number / Value", name: num, widget: string}
+              - {label: Label, name: label, widget: string}
+          - {label: "Values Strip — Statement 1", name: value1, widget: string}
+          - {label: "Values Strip — Statement 2", name: value2, widget: string}
+          - {label: "Values Strip — Statement 3", name: value3, widget: string}
+          - {label: "CTA — Headline", name: cta_headline, widget: string}
+          - {label: "CTA — Subtext", name: cta_sub, widget: text}
+
+      - name: contact
+        label: Contact Page
+        file: _content/contact.json
+        fields:
+          - {label: Page Subheadline, name: page_sub, widget: text}
+          - {label: Phone Response Note, name: phone_note, widget: text}
+          - {label: Success Message — Headline, name: success_headline, widget: string}
+          - {label: Success Message — Subtext, name: success_sub, widget: text}

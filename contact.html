@@ -87,7 +87,7 @@
       <div class="container page-hero__inner">
         <p class="eyebrow">Get in Touch</p>
         <h1 class="page-hero__headline">Reserve Your Spot</h1>
-        <p class="page-hero__sub">Fill out the form below and we'll get back to you within 24 hours. Prefer to reach us directly? Our contact info is on the left.</p>
+        <p class="page-hero__sub">{{contact.page_sub}}</p>
       </div>
     </section>
 
@@ -112,8 +112,8 @@
               <div>
                 <p class="contact-info__label">Address</p>
                 <address class="contact-info__value">
-                  55235 Garrett Rd<br />
-                  Dowagiac, MI 49047
+                  {{global.address_street}}<br />
+                  {{global.address_city}}
                 </address>
               </div>
             </li>
@@ -124,8 +124,8 @@
               </span>
               <div>
                 <p class="contact-info__label">Phone</p>
-                <p class="contact-info__value" style="font-weight:400;"><a href="tel:+12697823090">(269) 782-3090</a></p>
-                <p class="contact-info__note">We try to respond as quickly as possible within 24 hours.</p>
+                <p class="contact-info__value" style="font-weight:400;"><a href="tel:{{global.phone_link}}">{{global.phone}}</a></p>
+                <p class="contact-info__note">{{contact.phone_note}}</p>
               </div>
             </li>
 
@@ -136,7 +136,7 @@
               <div>
                 <p class="contact-info__label">Email</p>
                 <!-- Displayed as text only; all contact routed through EmailJS -->
-                <p class="contact-info__value">Lmalinmtl@gmail.com</p>
+                <p class="contact-info__value">{{global.email}}</p>
               </div>
             </li>
 
@@ -225,8 +225,8 @@
           <!-- Success state — replaces form in place, fades in -->
           <div class="form-success" id="form-success" style="display:none; opacity:0; transition: opacity 0.4s ease;" aria-live="polite">
             <span class="form-success__check" aria-hidden="true">✓</span>
-            <h2 class="form-success__headline">We received your inquiry!</h2>
-            <p class="form-success__sub">Thank you for reaching out. We'll be in touch within 24 hours. We look forward to storing your vehicle.</p>
+            <h2 class="form-success__headline">{{contact.success_headline}}</h2>
+            <p class="form-success__sub">{{contact.success_sub}}</p>
             <a href="index.html" class="form-success__back">← Back to Home</a>
           </div>
 
@@ -256,11 +256,11 @@
         </div>
         <div class="footer-logo-divider" aria-hidden="true"></div>
         <address>
-          55235 Garrett Rd<br />
-          Dowagiac, MI 49047
+          {{global.address_street}}<br />
+          {{global.address_city}}
         </address>
-        <p><a href="tel:+12697823090">(269) 782-3090</a></p>
-        <p>Lmalinmtl@gmail.com</p>
+        <p><a href="tel:{{global.phone_link}}">{{global.phone}}</a></p>
+        <p>{{global.email}}</p>
       </div>
 
       <nav class="footer-col" aria-label="Footer navigation">
@@ -275,10 +275,10 @@
 
       <div class="footer-col">
         <p class="footer-col-heading">Access &amp; Hours</p>
-        <p><strong>Customer Access:</strong> 24 hours a day, 7 days a week</p>
-        <p><strong>New Customers:</strong> Accepted year round</p>
-        <p><strong>Pickup &amp; Drop-Off:</strong> Available with advance notice</p>
-        <p class="footer-location">Conveniently located near Sister Lakes, MI</p>
+        <p><strong>Customer Access:</strong> {{global.footer_access}}</p>
+        <p><strong>New Customers:</strong> {{global.footer_new_customers}}</p>
+        <p><strong>Pickup &amp; Drop-Off:</strong> {{global.footer_pickup}}</p>
+        <p class="footer-location">{{global.footer_location}}</p>
       </div>
 
     </div>

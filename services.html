@@ -85,7 +85,7 @@
       <div class="container page-hero__inner">
         <p class="eyebrow">What We Offer</p>
         <h1 class="page-hero__headline">Storage &amp; Services</h1>
-        <p class="page-hero__sub">Seasonal storage, winterization, shrink wrap, cleaning, and more.</p>
+        <p class="page-hero__sub">{{services.page_sub}}</p>
       </div>
     </section>
 
@@ -125,7 +125,7 @@
             <li><a href="#panel-custom"      class="sp-sidebar__link">Custom Requests</a></li>
           </ul>
           <div class="sp-sidebar__divider" aria-hidden="true"></div>
-          <p class="sp-sidebar__note">Add-on services available to storage customers only.</p>
+          <p class="sp-sidebar__note">{{services.sidebar_note}}</p>
         </aside>
 
         <!-- ── Scrolling panels ── -->
@@ -137,63 +137,37 @@
               <span class="sp-panel__num" aria-hidden="true">01</span>
               <div class="sp-panel__heading">
                 <h2 id="panel-storage-title">Seasonal Storage</h2>
-                <p class="sp-panel__descriptor">September through April · Indoor Barn</p>
+                <p class="sp-panel__descriptor">{{services.panel_storage.descriptor}}</p>
               </div>
             </div>
             <div class="sp-panel__content">
               <div class="sp-steps">
-                <div class="sp-step">
-                  <div class="sp-step__marker"><span>1</span></div>
+                {{#services.panel_storage.steps}}
+                <div class="sp-step {{__last__}}">
+                  <div class="sp-step__marker"><span></span></div>
                   <div class="sp-step__body">
-                    <strong>Drop-Off</strong>
-                    <p>Bring your vehicle to us or we come to you — pickup is included.</p>
+                    <strong>{{title}}</strong>
+                    <p>{{description}}</p>
                   </div>
                 </div>
-                <div class="sp-step">
-                  <div class="sp-step__marker"><span>2</span></div>
-                  <div class="sp-step__body">
-                    <strong>Intake</strong>
-                    <p>We document your vehicle's condition and assign your storage bay.</p>
-                  </div>
-                </div>
-                <div class="sp-step">
-                  <div class="sp-step__marker"><span>3</span></div>
-                  <div class="sp-step__body">
-                    <strong>Secure Storage</strong>
-                    <p>Your vehicle stays in our locked, lit barn with camera coverage.</p>
-                  </div>
-                </div>
-                <div class="sp-step">
-                  <div class="sp-step__marker"><span>4</span></div>
-                  <div class="sp-step__body">
-                    <strong>Call-Ahead Access</strong>
-                    <p>Just call ahead and we'll have your vehicle ready to go.</p>
-                  </div>
-                </div>
-                <div class="sp-step sp-step--last">
-                  <div class="sp-step__marker"><span>5</span></div>
-                  <div class="sp-step__body">
-                    <strong>Spring Pickup</strong>
-                    <p>Call to arrange a time and date for pickup or drop-off that works for you.</p>
-                  </div>
-                </div>
+                {{/services.panel_storage.steps}}
               </div>
 
               <div class="sp-details">
                 <div class="sp-details__pricing">
                   <p class="sp-details__label">Pricing</p>
                   <ul class="sp-details__price-list">
-                    <li><span class="sp-details__tier">Small</span><span class="sp-details__amount">$349<span class="sp-details__per">/season</span></span></li>
-                    <li><span class="sp-details__tier">Medium</span><span class="sp-details__amount">$499<span class="sp-details__per">/season</span></span></li>
-                    <li><span class="sp-details__tier">Large</span><span class="sp-details__amount">$649<span class="sp-details__per">/season</span></span></li>
-                    <li><span class="sp-details__tier">Extra Large</span><span class="sp-details__amount sp-details__amount--quote">Contact for Quote</span></li>
+                    <li><span class="sp-details__tier">{{services.panel_storage.rate_small_tier}}</span><span class="sp-details__amount">{{services.panel_storage.rate_small_amount}}<span class="sp-details__per">/season</span></span></li>
+                    <li><span class="sp-details__tier">{{services.panel_storage.rate_medium_tier}}</span><span class="sp-details__amount">{{services.panel_storage.rate_medium_amount}}<span class="sp-details__per">/season</span></span></li>
+                    <li><span class="sp-details__tier">{{services.panel_storage.rate_large_tier}}</span><span class="sp-details__amount">{{services.panel_storage.rate_large_amount}}<span class="sp-details__per">/season</span></span></li>
+                    <li><span class="sp-details__tier">{{services.panel_storage.rate_xl_tier}}</span><span class="sp-details__amount sp-details__amount--quote">{{services.panel_storage.rate_xl_amount}}</span></li>
                   </ul>
-                  <p class="sp-details__tier-note">Small: Snowmobiles, ATVs, Jet Skis · Medium: Boats up to 20ft · Large: Boats 20–28ft · Extra Large: 28ft+ &amp; RVs</p>
-                  <p class="sp-details__tier-note">Need storage outside the standard season? Call us — we're happy to work something out.</p>
+                  <p class="sp-details__tier-note">{{services.panel_storage.tier_note}}</p>
+                  <p class="sp-details__tier-note">{{services.panel_storage.tier_note2}}</p>
                 </div>
                 <div class="sp-details__meta">
-                  <p><span class="sp-details__meta-label">Best for:</span> Anyone needing secure, worry-free off-season storage</p>
-                  <p><span class="sp-details__meta-label">What to expect:</span> One flat rate covers the full season — no monthly billing, no surprises</p>
+                  <p><span class="sp-details__meta-label">Best for:</span> {{services.panel_storage.best_for}}</p>
+                  <p><span class="sp-details__meta-label">What to expect:</span> {{services.panel_storage.what_to_expect}}</p>
                 </div>
                 <a href="contact.html" class="sp-details__cta">Get Started →</a>
               </div>
@@ -208,57 +182,31 @@
               <span class="sp-panel__num" aria-hidden="true">02</span>
               <div class="sp-panel__heading">
                 <h2 id="panel-winterize-title">Winterization</h2>
-                <p class="sp-panel__descriptor">Full Off-Season Prep · Storage Customers Only</p>
+                <p class="sp-panel__descriptor">{{services.panel_winterize.descriptor}}</p>
               </div>
             </div>
             <div class="sp-panel__content">
               <div class="sp-steps">
-                <div class="sp-step">
-                  <div class="sp-step__marker"><span>1</span></div>
+                {{#services.panel_winterize.steps}}
+                <div class="sp-step {{__last__}}">
+                  <div class="sp-step__marker"><span></span></div>
                   <div class="sp-step__body">
-                    <strong>Engine Fogging</strong>
-                    <p>Protective oil fogged into the engine to prevent corrosion during storage.</p>
+                    <strong>{{title}}</strong>
+                    <p>{{description}}</p>
                   </div>
                 </div>
-                <div class="sp-step">
-                  <div class="sp-step__marker"><span>2</span></div>
-                  <div class="sp-step__body">
-                    <strong>Fluid Draining</strong>
-                    <p>All water and fuel lines are drained to prevent freeze damage.</p>
-                  </div>
-                </div>
-                <div class="sp-step">
-                  <div class="sp-step__marker"><span>3</span></div>
-                  <div class="sp-step__body">
-                    <strong>Antifreeze Treatment</strong>
-                    <p>Antifreeze applied to remaining systems to protect against Michigan winters.</p>
-                  </div>
-                </div>
-                <div class="sp-step">
-                  <div class="sp-step__marker"><span>4</span></div>
-                  <div class="sp-step__body">
-                    <strong>Battery Removal</strong>
-                    <p>Battery is safely removed and stored to preserve its charge.</p>
-                  </div>
-                </div>
-                <div class="sp-step sp-step--last">
-                  <div class="sp-step__marker"><span>5</span></div>
-                  <div class="sp-step__body">
-                    <strong>Shrink Wrapping</strong>
-                    <p>Full professional wrap applied to seal out moisture and debris.</p>
-                  </div>
-                </div>
+                {{/services.panel_winterize.steps}}
               </div>
 
               <div class="sp-details">
                 <div class="sp-details__pricing">
                   <p class="sp-details__label">Pricing</p>
-                  <p class="sp-details__main-price">Contact for Quote</p>
-                  <p class="sp-details__range">Typical range: $250–$450 depending on vessel size</p>
+                  <p class="sp-details__main-price">{{services.panel_winterize.main_price}}</p>
+                  <p class="sp-details__range">{{services.panel_winterize.price_range}}</p>
                 </div>
                 <div class="sp-details__meta">
-                  <p><span class="sp-details__meta-label">Best for:</span> Boat owners who want full protection handled for them</p>
-                  <p><span class="sp-details__meta-label">What to expect:</span> We handle everything — your boat goes in ready for winter, comes out ready to launch</p>
+                  <p><span class="sp-details__meta-label">Best for:</span> {{services.panel_winterize.best_for}}</p>
+                  <p><span class="sp-details__meta-label">What to expect:</span> {{services.panel_winterize.what_to_expect}}</p>
                 </div>
                 <a href="contact.html" class="sp-details__cta">Request a Quote →</a>
               </div>
@@ -273,50 +221,31 @@
               <span class="sp-panel__num" aria-hidden="true">03</span>
               <div class="sp-panel__heading">
                 <h2 id="panel-wash-title">Boat Cleaning &amp; Wash</h2>
-                <p class="sp-panel__descriptor">Before or After Storage · Storage Customers Only</p>
+                <p class="sp-panel__descriptor">{{services.panel_wash.descriptor}}</p>
               </div>
             </div>
             <div class="sp-panel__content">
               <div class="sp-steps">
-                <div class="sp-step">
-                  <div class="sp-step__marker"><span>1</span></div>
+                {{#services.panel_wash.steps}}
+                <div class="sp-step {{__last__}}">
+                  <div class="sp-step__marker"><span></span></div>
                   <div class="sp-step__body">
-                    <strong>Exterior Wash</strong>
-                    <p>Full hull and topside wash to remove dirt, algae, and water deposits.</p>
+                    <strong>{{title}}</strong>
+                    <p>{{description}}</p>
                   </div>
                 </div>
-                <div class="sp-step">
-                  <div class="sp-step__marker"><span>2</span></div>
-                  <div class="sp-step__body">
-                    <strong>Interior Cleaning</strong>
-                    <p>Cabin, seating, and storage areas wiped down and cleaned out so your boat is fresh inside and out.</p>
-                  </div>
-                </div>
-                <div class="sp-step">
-                  <div class="sp-step__marker"><span>3</span></div>
-                  <div class="sp-step__body">
-                    <strong>Rinse &amp; Dry</strong>
-                    <p>Full rinse and dry-down before storage or delivery.</p>
-                  </div>
-                </div>
-                <div class="sp-step sp-step--last">
-                  <div class="sp-step__marker"><span>4</span></div>
-                  <div class="sp-step__body">
-                    <strong>Additional Detailing Available</strong>
-                    <p>Need something more specific? Additional cleaning and detailing services are available on request — just ask us what you need.</p>
-                  </div>
-                </div>
+                {{/services.panel_wash.steps}}
               </div>
 
               <div class="sp-details">
                 <div class="sp-details__pricing">
                   <p class="sp-details__label">Pricing</p>
-                  <p class="sp-details__main-price">Starting at $75</p>
-                  <p class="sp-details__range">Larger vessels: $100–$150</p>
+                  <p class="sp-details__main-price">{{services.panel_wash.main_price}}</p>
+                  <p class="sp-details__range">{{services.panel_wash.price_range}}</p>
                 </div>
                 <div class="sp-details__meta">
-                  <p><span class="sp-details__meta-label">Best for:</span> Storing a clean boat or picking one up ready for the water</p>
-                  <p><span class="sp-details__meta-label">What to expect:</span> Drop it off dirty, get it back clean</p>
+                  <p><span class="sp-details__meta-label">Best for:</span> {{services.panel_wash.best_for}}</p>
+                  <p><span class="sp-details__meta-label">What to expect:</span> {{services.panel_wash.what_to_expect}}</p>
                 </div>
                 <a href="contact.html" class="sp-details__cta">Request a Quote →</a>
               </div>
@@ -392,50 +321,31 @@
               <span class="sp-panel__num" aria-hidden="true">04</span>
               <div class="sp-panel__heading">
                 <h2 id="panel-maintenance-title">Maintenance &amp; Repair</h2>
-                <p class="sp-panel__descriptor">Basic Service · Storage Customers Only</p>
+                <p class="sp-panel__descriptor">{{services.panel_maintenance.descriptor}}</p>
               </div>
             </div>
             <div class="sp-panel__content">
               <div class="sp-steps">
-                <div class="sp-step">
-                  <div class="sp-step__marker"><span>1</span></div>
+                {{#services.panel_maintenance.steps}}
+                <div class="sp-step {{__last__}}">
+                  <div class="sp-step__marker"><span></span></div>
                   <div class="sp-step__body">
-                    <strong>Assessment</strong>
-                    <p>We assess your vehicle's condition and discuss what's needed.</p>
+                    <strong>{{title}}</strong>
+                    <p>{{description}}</p>
                   </div>
                 </div>
-                <div class="sp-step">
-                  <div class="sp-step__marker"><span>2</span></div>
-                  <div class="sp-step__body">
-                    <strong>Scheduling</strong>
-                    <p>Work is scheduled and completed while your vehicle is in storage.</p>
-                  </div>
-                </div>
-                <div class="sp-step">
-                  <div class="sp-step__marker"><span>3</span></div>
-                  <div class="sp-step__body">
-                    <strong>Updates</strong>
-                    <p>We contact you with any findings or questions before proceeding.</p>
-                  </div>
-                </div>
-                <div class="sp-step sp-step--last">
-                  <div class="sp-step__marker"><span>4</span></div>
-                  <div class="sp-step__body">
-                    <strong>Completion</strong>
-                    <p>Work completed and documented before your seasonal pickup.</p>
-                  </div>
-                </div>
+                {{/services.panel_maintenance.steps}}
               </div>
 
               <div class="sp-details">
                 <div class="sp-details__pricing">
                   <p class="sp-details__label">Pricing</p>
-                  <p class="sp-details__main-price">Contact for Quote</p>
-                  <p class="sp-details__range">Basic tune-ups from $50 — larger repairs quoted individually</p>
+                  <p class="sp-details__main-price">{{services.panel_maintenance.main_price}}</p>
+                  <p class="sp-details__range">{{services.panel_maintenance.price_range}}</p>
                 </div>
                 <div class="sp-details__meta">
-                  <p><span class="sp-details__meta-label">Best for:</span> Minor mechanical issues or seasonal tune-ups between storage periods</p>
-                  <p><span class="sp-details__meta-label">What to expect:</span> Convenient — your vehicle gets serviced while it's already here</p>
+                  <p><span class="sp-details__meta-label">Best for:</span> {{services.panel_maintenance.best_for}}</p>
+                  <p><span class="sp-details__meta-label">What to expect:</span> {{services.panel_maintenance.what_to_expect}}</p>
                 </div>
                 <a href="contact.html" class="sp-details__cta">Request a Quote →</a>
               </div>
@@ -450,50 +360,31 @@
               <span class="sp-panel__num" aria-hidden="true">05</span>
               <div class="sp-panel__heading">
                 <h2 id="panel-pickup-title">Pickup &amp; Drop-Off</h2>
-                <p class="sp-panel__descriptor">Included with Every Storage Plan</p>
+                <p class="sp-panel__descriptor">{{services.panel_pickup.descriptor}}</p>
               </div>
             </div>
             <div class="sp-panel__content">
               <div class="sp-steps">
-                <div class="sp-step">
-                  <div class="sp-step__marker"><span>1</span></div>
+                {{#services.panel_pickup.steps}}
+                <div class="sp-step {{__last__}}">
+                  <div class="sp-step__marker"><span></span></div>
                   <div class="sp-step__body">
-                    <strong>Schedule</strong>
-                    <p>Contact us a few days before you need pickup or delivery.</p>
+                    <strong>{{title}}</strong>
+                    <p>{{description}}</p>
                   </div>
                 </div>
-                <div class="sp-step">
-                  <div class="sp-step__marker"><span>2</span></div>
-                  <div class="sp-step__body">
-                    <strong>We Come to You</strong>
-                    <p>We arrive at your location with the right equipment to haul your vehicle.</p>
-                  </div>
-                </div>
-                <div class="sp-step">
-                  <div class="sp-step__marker"><span>3</span></div>
-                  <div class="sp-step__body">
-                    <strong>Transport</strong>
-                    <p>Your vehicle is safely transported to or from our facility.</p>
-                  </div>
-                </div>
-                <div class="sp-step sp-step--last">
-                  <div class="sp-step__marker"><span>4</span></div>
-                  <div class="sp-step__body">
-                    <strong>Confirmation</strong>
-                    <p>We confirm arrival and condition at both ends of the trip.</p>
-                  </div>
-                </div>
+                {{/services.panel_pickup.steps}}
               </div>
 
               <div class="sp-details">
                 <div class="sp-details__pricing">
                   <p class="sp-details__label">Pricing</p>
-                  <p class="sp-details__main-price sp-details__main-price--included">Included — $0 additional cost</p>
+                  <p class="sp-details__main-price sp-details__main-price--included">{{services.panel_pickup.main_price}}</p>
                 </div>
                 <div class="sp-details__meta">
-                  <p><span class="sp-details__meta-label">Best for:</span> Anyone who doesn't want the hassle of trailering at season start and end</p>
-                  <p><span class="sp-details__meta-label">What to expect:</span> Give us a few days notice and we handle the rest</p>
-                  <p><span class="sp-details__meta-label">Service Area:</span> Pickup and drop-off is included free within a 20-mile radius of our facility. Outside that range, we can still make it work — just give us a call and we'll sort out the details.</p>
+                  <p><span class="sp-details__meta-label">Best for:</span> {{services.panel_pickup.best_for}}</p>
+                  <p><span class="sp-details__meta-label">What to expect:</span> {{services.panel_pickup.what_to_expect}}</p>
+                  <p><span class="sp-details__meta-label">Service Area:</span> {{services.panel_pickup.service_area}}</p>
                 </div>
                 <a href="contact.html" class="sp-details__cta">Get Started →</a>
               </div>
@@ -508,42 +399,30 @@
               <span class="sp-panel__num" aria-hidden="true">06</span>
               <div class="sp-panel__heading">
                 <h2 id="panel-custom-title">Custom Requests</h2>
-                <p class="sp-panel__descriptor">Something Specific · Let's Talk</p>
+                <p class="sp-panel__descriptor">{{services.panel_custom.descriptor}}</p>
               </div>
             </div>
             <div class="sp-panel__content">
               <div class="sp-steps">
-                <div class="sp-step">
-                  <div class="sp-step__marker"><span>1</span></div>
+                {{#services.panel_custom.steps}}
+                <div class="sp-step {{__last__}}">
+                  <div class="sp-step__marker"><span></span></div>
                   <div class="sp-step__body">
-                    <strong>Reach Out</strong>
-                    <p>Call or email us with what you have in mind.</p>
+                    <strong>{{title}}</strong>
+                    <p>{{description}}</p>
                   </div>
                 </div>
-                <div class="sp-step">
-                  <div class="sp-step__marker"><span>2</span></div>
-                  <div class="sp-step__body">
-                    <strong>We'll Assess</strong>
-                    <p>If we can accommodate it, we'll give you a straight answer and a quote.</p>
-                  </div>
-                </div>
-                <div class="sp-step sp-step--last">
-                  <div class="sp-step__marker"><span>3</span></div>
-                  <div class="sp-step__body">
-                    <strong>Get It Done</strong>
-                    <p>We handle it while your vehicle is in our care.</p>
-                  </div>
-                </div>
+                {{/services.panel_custom.steps}}
               </div>
 
               <div class="sp-details">
                 <div class="sp-details__pricing">
                   <p class="sp-details__label">Pricing</p>
-                  <p class="sp-details__main-price">Contact for Quote</p>
+                  <p class="sp-details__main-price">{{services.panel_custom.main_price}}</p>
                 </div>
                 <div class="sp-details__meta">
-                  <p><span class="sp-details__meta-label">Best for:</span> Anything not covered above — ask and we'll figure it out</p>
-                  <p><span class="sp-details__meta-label">What to expect:</span> An honest answer about whether we can help and what it costs</p>
+                  <p><span class="sp-details__meta-label">Best for:</span> {{services.panel_custom.best_for}}</p>
+                  <p><span class="sp-details__meta-label">What to expect:</span> {{services.panel_custom.what_to_expect}}</p>
                 </div>
                 <a href="contact.html" class="sp-details__cta">Get in Touch →</a>
               </div>
@@ -561,8 +440,8 @@
          ============================================================ -->
     <section class="sp-cta" aria-labelledby="sp-cta-heading">
       <div class="container sp-cta__inner">
-        <h2 id="sp-cta-heading" class="sp-cta__headline">Ready to Get Started?</h2>
-        <p class="sp-cta__sub">Reach out today and we'll get back to you within 24 hours.</p>
+        <h2 id="sp-cta-heading" class="sp-cta__headline">{{services.cta_headline}}</h2>
+        <p class="sp-cta__sub">{{services.cta_sub}}</p>
         <a href="contact.html" class="sp-cta__btn">Reserve Your Spot →</a>
       </div>
     </section>
@@ -588,11 +467,11 @@
         </div>
         <div class="footer-logo-divider" aria-hidden="true"></div>
         <address>
-          55235 Garrett Rd<br />
-          Dowagiac, MI 49047
+          {{global.address_street}}<br />
+          {{global.address_city}}
         </address>
-        <p><a href="tel:+12697823090">(269) 782-3090</a></p>
-        <p>Lmalinmtl@gmail.com</p>
+        <p><a href="tel:{{global.phone_link}}">{{global.phone}}</a></p>
+        <p>{{global.email}}</p>
       </div>
 
       <nav class="footer-col" aria-label="Footer navigation">
@@ -607,10 +486,10 @@
 
       <div class="footer-col">
         <p class="footer-col-heading">Access &amp; Hours</p>
-        <p><strong>Customer Access:</strong> 24 hours a day, 7 days a week</p>
-        <p><strong>New Customers:</strong> Accepted year round</p>
-        <p><strong>Pickup &amp; Drop-Off:</strong> Available with advance notice</p>
-        <p class="footer-location">Conveniently located near Sister Lakes, MI</p>
+        <p><strong>Customer Access:</strong> {{global.footer_access}}</p>
+        <p><strong>New Customers:</strong> {{global.footer_new_customers}}</p>
+        <p><strong>Pickup &amp; Drop-Off:</strong> {{global.footer_pickup}}</p>
+        <p class="footer-location">{{global.footer_location}}</p>
       </div>
 
     </div>

@@ -98,17 +98,17 @@
         <!-- Pull quote -->
         <blockquote class="ab-pullquote">
           <span class="ab-pullquote__line" aria-hidden="true"></span>
-          <p>"We've been part of this community our whole lives. Boats Galore is just the next chapter."</p>
+          <p>"{{about.pullquote}}"</p>
           <span class="ab-pullquote__line" aria-hidden="true"></span>
         </blockquote>
 
         <!-- Body copy with drop cap on first paragraph -->
         <div class="ab-story__body">
-          <p class="ab-dropcap">Mike and Leslie Malin have spent their lives rooted in southwest Michigan. Long before Boats Galore existed, they were known throughout Dowagiac and the surrounding area for running a successful landscaping operation — the kind of family business built on showing up, doing the job right, and treating people the way you'd want to be treated yourself.</p>
+          <p class="ab-dropcap">{{about.story_p1}}</p>
 
-          <p>Boats Galore grew naturally out of that same mindset. The Sister Lakes area has always been boat country — tens of thousands of people across Cass County, Van Buren County, and northern Indiana keep watercraft on or near these lakes every summer. When the season ends, those boats, jet skis, pontoons, and RVs need somewhere safe to go. Mike and Leslie saw a need in their own backyard and built something to meet it.</p>
+          <p>{{about.story_p2}}</p>
 
-          <p>This is still a family operation. When you call, you're talking to the owners. When you drop off your boat, they're the ones receiving it. That's not something you'll find at a commercial storage chain — and it's something they take seriously.</p>
+          <p>{{about.story_p3}}</p>
         </div>
 
         <hr class="ab-story__rule" aria-hidden="true" />
@@ -126,40 +126,27 @@
         <div class="ab-area__header">
           <p class="eyebrow">The Sister Lakes Area</p>
           <h2 class="ab-area__headline">Boat Country, Through and Through</h2>
-          <p class="ab-area__sub">Southwest Michigan's lakes have been drawing boaters and water lovers for over a century. We're proud to be part of that tradition.</p>
+          <p class="ab-area__sub">{{about.area_sub}}</p>
         </div>
 
         <div class="ab-area__cols">
 
           <!-- Left: area copy -->
           <div class="ab-area__copy">
-            <p>The Sister Lakes region sits in the heart of southwest Michigan — home to more than ten lakes within a six-mile radius, including Magician Lake, Round Lake, Dewey Lake, and Crooked Lake. It's one of the most active boating communities in Cass County, drawing visitors and seasonal residents from across Michigan, northern Indiana, and the greater Chicago area.</p>
-            <p>Boating season runs hard from late spring through Labor Day — pontoons, fishing boats, jet skis, and speedboats fill the water all summer long. When the season winds down and the Michigan winter sets in, those vehicles need a home. That's where we come in.</p>
-            <p>We serve boat and vehicle owners across Dowagiac, Sister Lakes, Cassopolis, Niles, Edwardsburg, South Bend, Granger, and the surrounding area. If you're within a reasonable distance and need storage you can trust, we want to hear from you.</p>
+            <p>{{about.area_p1}}</p>
+            <p>{{about.area_p2}}</p>
+            <p>{{about.area_p3}}</p>
           </div>
 
           <!-- Right: stats -->
           <div class="ab-stats" role="list">
 
+            {{#about.stats}}
             <div class="ab-stat" role="listitem">
-              <p class="ab-stat__num">10+</p>
-              <p class="ab-stat__label">Lakes within 6 miles</p>
+              <p class="ab-stat__num">{{num}}</p>
+              <p class="ab-stat__label">{{label}}</p>
             </div>
-
-            <div class="ab-stat" role="listitem">
-              <p class="ab-stat__num">4</p>
-              <p class="ab-stat__label">Seasons of storage available</p>
-            </div>
-
-            <div class="ab-stat" role="listitem">
-              <p class="ab-stat__num">Always</p>
-              <p class="ab-stat__label">Available when you call</p>
-            </div>
-
-            <div class="ab-stat" role="listitem">
-              <p class="ab-stat__num">1</p>
-              <p class="ab-stat__label">Family running it all</p>
-            </div>
+            {{/about.stats}}
 
           </div>
 
@@ -180,15 +167,15 @@
         <div class="ab-values__statements">
           <div class="ab-value-row ab-value-row--white">
             <span class="ab-value-row__num" aria-hidden="true">01</span>
-            <p class="ab-value-row__text">"We answer the phone."</p>
+            <p class="ab-value-row__text">"{{about.value1}}"</p>
           </div>
           <div class="ab-value-row ab-value-row--gold">
             <span class="ab-value-row__num" aria-hidden="true">02</span>
-            <p class="ab-value-row__text">"Your boat comes back how you left it."</p>
+            <p class="ab-value-row__text">"{{about.value2}}"</p>
           </div>
           <div class="ab-value-row ab-value-row--white">
             <span class="ab-value-row__num" aria-hidden="true">03</span>
-            <p class="ab-value-row__text">"No surprises on your bill."</p>
+            <p class="ab-value-row__text">"{{about.value3}}"</p>
           </div>
         </div>
 
@@ -201,8 +188,8 @@
          ============================================================ -->
     <section class="ab-cta anim-section">
       <div class="container ab-cta__inner">
-        <h2 class="ab-cta__headline">Ready to Store With Us?</h2>
-        <p class="ab-cta__sub">We serve Sister Lakes, Cass County, and the surrounding southwest Michigan area. Reach out today.</p>
+        <h2 class="ab-cta__headline">{{about.cta_headline}}</h2>
+        <p class="ab-cta__sub">{{about.cta_sub}}</p>
         <a href="contact.html" class="ab-cta__btn">Get in Touch →</a>
       </div>
     </section>
@@ -228,11 +215,11 @@
         </div>
         <div class="footer-logo-divider" aria-hidden="true"></div>
         <address>
-          55235 Garrett Rd<br />
-          Dowagiac, MI 49047
+          {{global.address_street}}<br />
+          {{global.address_city}}
         </address>
-        <p><a href="tel:+12697823090">(269) 782-3090</a></p>
-        <p>Lmalinmtl@gmail.com</p>
+        <p><a href="tel:{{global.phone_link}}">{{global.phone}}</a></p>
+        <p>{{global.email}}</p>
       </div>
 
       <nav class="footer-col" aria-label="Footer navigation">
@@ -247,10 +234,10 @@
 
       <div class="footer-col">
         <p class="footer-col-heading">Access &amp; Hours</p>
-        <p><strong>Customer Access:</strong> 24 hours a day, 7 days a week</p>
-        <p><strong>New Customers:</strong> Accepted year round</p>
-        <p><strong>Pickup &amp; Drop-Off:</strong> Available with advance notice</p>
-        <p class="footer-location">Conveniently located near Sister Lakes, MI</p>
+        <p><strong>Customer Access:</strong> {{global.footer_access}}</p>
+        <p><strong>New Customers:</strong> {{global.footer_new_customers}}</p>
+        <p><strong>Pickup &amp; Drop-Off:</strong> {{global.footer_pickup}}</p>
+        <p class="footer-location">{{global.footer_location}}</p>
       </div>
 
     </div>

@@ -1,0 +1,92 @@
+{
+  "page_sub": "Seasonal storage, winterization, shrink wrap, cleaning, and more.",
+  "sidebar_note": "Add-on services available to storage customers only.",
+  "panel_storage": {
+    "descriptor": "September through April · Indoor Barn",
+    "steps": [
+      {"title": "Drop-Off", "description": "Bring your vehicle to us or we come to you — pickup is included."},
+      {"title": "Intake", "description": "We document your vehicle's condition and assign your storage bay."},
+      {"title": "Secure Storage", "description": "Your vehicle stays in our locked, lit barn with camera coverage."},
+      {"title": "Call-Ahead Access", "description": "Just call ahead and we'll have your vehicle ready to go."},
+      {"title": "Spring Pickup", "description": "Call to arrange a time and date for pickup or drop-off that works for you."}
+    ],
+    "rate_small_tier": "Small",
+    "rate_small_amount": "$349",
+    "rate_medium_tier": "Medium",
+    "rate_medium_amount": "$499",
+    "rate_large_tier": "Large",
+    "rate_large_amount": "$649",
+    "rate_xl_tier": "Extra Large",
+    "rate_xl_amount": "Contact for Quote",
+    "tier_note": "Small: Snowmobiles, ATVs, Jet Skis · Medium: Boats up to 20ft · Large: Boats 20–28ft · Extra Large: 28ft+ & RVs",
+    "tier_note2": "Need storage outside the standard season? Call us — we're happy to work something out.",
+    "best_for": "Anyone needing secure, worry-free off-season storage",
+    "what_to_expect": "One flat rate covers the full season — no monthly billing, no surprises"
+  },
+  "panel_winterize": {
+    "descriptor": "Full Off-Season Prep · Storage Customers Only",
+    "steps": [
+      {"title": "Engine Fogging", "description": "Protective oil fogged into the engine to prevent corrosion during storage."},
+      {"title": "Fluid Draining", "description": "All water and fuel lines are drained to prevent freeze damage."},
+      {"title": "Antifreeze Treatment", "description": "Antifreeze applied to remaining systems to protect against Michigan winters."},
+      {"title": "Battery Removal", "description": "Battery is safely removed and stored to preserve its charge."},
+      {"title": "Shrink Wrapping", "description": "Full professional wrap applied to seal out moisture and debris."}
+    ],
+    "main_price": "Contact for Quote",
+    "price_range": "Typical range: $250–$450 depending on vessel size",
+    "best_for": "Boat owners who want full protection handled for them",
+    "what_to_expect": "We handle everything — your boat goes in ready for winter, comes out ready to launch"
+  },
+  "panel_wash": {
+    "descriptor": "Before or After Storage · Storage Customers Only",
+    "steps": [
+      {"title": "Exterior Wash", "description": "Full hull and topside wash to remove dirt, algae, and water deposits."},
+      {"title": "Interior Cleaning", "description": "Cabin, seating, and storage areas wiped down and cleaned out so your boat is fresh inside and out."},
+      {"title": "Rinse & Dry", "description": "Full rinse and dry-down before storage or delivery."},
+      {"title": "Additional Detailing Available", "description": "Need something more specific? Additional cleaning and detailing services are available on request — just ask us what you need."}
+    ],
+    "main_price": "Starting at $75",
+    "price_range": "Larger vessels: $100–$150",
+    "best_for": "Storing a clean boat or picking one up ready for the water",
+    "what_to_expect": "Drop it off dirty, get it back clean"
+  },
+  "panel_maintenance": {
+    "descriptor": "Basic Service · Storage Customers Only",
+    "steps": [
+      {"title": "Assessment", "description": "We assess your vehicle's condition and discuss what's needed."},
+      {"title": "Scheduling", "description": "Work is scheduled and completed while your vehicle is in storage."},
+      {"title": "Updates", "description": "We contact you with any findings or questions before proceeding."},
+      {"title": "Completion", "description": "Work completed and documented before your seasonal pickup."}
+    ],
+    "main_price": "Contact for Quote",
+    "price_range": "Basic tune-ups from $50 — larger repairs quoted individually",
+    "best_for": "Minor mechanical issues or seasonal tune-ups between storage periods",
+    "what_to_expect": "Convenient — your vehicle gets serviced while it's already here"
+  },
+  "panel_pickup": {
+    "descriptor": "Included with Every Storage Plan",
+    "steps": [
+      {"title": "Schedule", "description": "Contact us a few days before you need pickup or delivery."},
+      {"title": "We Come to You", "description": "We arrive at your location with the right equipment to haul your vehicle."},
+      {"title": "Transport", "description": "Your vehicle is safely transported to or from our facility."},
+      {"title": "Confirmation", "description": "We confirm arrival and condition at both ends of the trip."}
+    ],
+    "main_price": "Included — $0 additional cost",
+    "best_for": "Anyone who doesn't want the hassle of trailering at season start and end",
+    "what_to_expect": "Give us a few days notice and we handle the rest",
+    "service_area": "Pickup and drop-off is included free within a 20-mile radius of our facility. Outside that range, we can still make it work — just give us a call and we'll sort out the details."
+  },
+  "panel_custom": {
+    "descriptor": "Something Specific · Let's Talk",
+    "steps": [
+      {"title": "Reach Out", "description": "Call or email us with what you have in mind."},
+      {"title": "We'll Assess", "description": "If we can accommodate it, we'll give you a straight answer and a quote."},
+      {"title": "Get It Done", "description": "We handle it while your vehicle is in our care."}
+    ],
+    "main_price": "Contact for Quote",
+    "best_for": "Anything not covered above — ask and we'll figure it out",
+    "what_to_expect": "An honest answer about whether we can help and what it costs"
+  },
+  "cta_headline": "Ready to Get Started?",
+  "cta_sub": "Reach out today and we'll get back to you within 24 hours."
+}
