@@ -2,7 +2,7 @@ backend:
   name: github
   repo: kramirezingold/Boats-Galore
   branch: main
-  base_url: https://boats-galore.com
+  base_url: https://boats-galore.vercel.app
   auth_endpoint: /api/auth
 
 media_folder: images
