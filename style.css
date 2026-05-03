@@ -1796,9 +1796,20 @@ footer {
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);
   padding-block: 1.25rem;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 0.8rem;
   color: rgba(250,250,248,0.4);
+}
+.footer-bottom a {
+  color: rgba(250,250,248,0.4);
+  text-decoration: none;
+}
+.footer-bottom a:hover {
+  color: var(--gold);
 }
 
 @media (min-width: 768px) {
