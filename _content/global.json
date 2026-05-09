@@ -1,11 +1,11 @@
 {
-  "phone": "(269) 782-3090",
-  "phone_link": "+12697823090",
-  "email": "Lmalinmtl@gmail.com",
-  "address_street": "55235 Garrett Rd",
-  "address_city": "Dowagiac, MI 49047",
-  "footer_access": "24 hours a day, 7 days a week",
-  "footer_new_customers": "Accepted year round",
   "footer_pickup": "Available with advance notice",
-  "footer_location": "Conveniently located near Sister Lakes, MI"
+  "footer_access": "Call-Ahead Access",
+  "phone_link": "+12697823090",
+  "phone": "(269) 782-3090",
+  "address_street": "55235 Garrett Rd",
+  "footer_new_customers": "Accepted year round",
+  "address_city": "Dowagiac, MI 49047",
+  "footer_location": "Conveniently located near Sister Lakes, MI",
+  "email": "Lmalinmtl@gmail.com"
 }
