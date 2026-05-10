@@ -63,20 +63,12 @@
         "description": "Protective oil fogged into the engine to prevent corrosion during storage."
       },
       {
-        "title": "Fluid Draining",
-        "description": "All water and fuel lines are drained to prevent freeze damage."
-      },
-      {
         "title": "Antifreeze Treatment",
-        "description": "Antifreeze applied to remaining systems to protect against Michigan winters."
+        "description": "Antifreeze pumped through remaining systems to protect against Michigan winters."
       },
       {
-        "title": "Battery Removal",
-        "description": "Battery is safely removed and stored to preserve its charge."
-      },
-      {
-        "title": "Shrink Wrapping",
-        "description": "Full professional wrap applied to seal out moisture and debris."
+        "title": "Battery Disconnect",
+        "description": "Battery is safely disconnected to preserve its charge."
       }
     ],
     "main_price": "Contact for Quote",
