@@ -202,6 +202,25 @@
             </div>
 
             <div class="form-group">
+              <label>Services Interested In</label>
+              <div class="services-dropdown" id="services-dropdown">
+                <button type="button" class="services-dropdown__toggle" aria-haspopup="listbox" aria-expanded="false" id="services-toggle">
+                  <span id="services-label">Select services...</span>
+                  <span class="services-dropdown__arrow" aria-hidden="true">▾</span>
+                </button>
+                <div class="services-dropdown__panel" id="services-panel" hidden role="listbox" aria-multiselectable="true">
+                  <label class="services-dropdown__option"><input type="checkbox" value="Seasonal Storage" /> Seasonal Storage</label>
+                  <label class="services-dropdown__option"><input type="checkbox" value="Winterization" /> Winterization</label>
+                  <label class="services-dropdown__option"><input type="checkbox" value="Cleaning &amp; Wash" /> Cleaning &amp; Wash</label>
+                  <label class="services-dropdown__option"><input type="checkbox" value="Maintenance" /> Maintenance</label>
+                  <label class="services-dropdown__option"><input type="checkbox" value="Pickup &amp; Drop-Off" /> Pickup &amp; Drop-Off</label>
+                  <label class="services-dropdown__option"><input type="checkbox" value="Custom Requests" /> Custom Requests</label>
+                </div>
+              </div>
+              <input type="hidden" name="services" id="services-value" />
+            </div>
+
+            <div class="form-group">
               <label for="heard_from">How did you hear about us?</label>
               <input type="text" id="heard_from" name="heard_from" placeholder="e.g. Google, word of mouth, drove by..." />
             </div>
@@ -295,6 +314,43 @@
   <script src="script.js"></script>
   <script>
     document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // Services dropdown
+    (function () {
+      const toggle  = document.getElementById('services-toggle');
+      const panel   = document.getElementById('services-panel');
+      const label   = document.getElementById('services-label');
+      const hidden  = document.getElementById('services-value');
+
+      function updateLabel() {
+        const checked = Array.from(panel.querySelectorAll('input:checked')).map(cb => cb.value);
+        label.textContent = checked.length ? checked.join(', ') : 'Select services...';
+        hidden.value = checked.join(', ');
+      }
+
+      toggle.addEventListener('click', function () {
+        const isOpen = !panel.hidden;
+        panel.hidden = isOpen;
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+      });
+
+      panel.addEventListener('change', updateLabel);
+
+      document.addEventListener('click', function (e) {
+        if (!document.getElementById('services-dropdown').contains(e.target)) {
+          panel.hidden = true;
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !panel.hidden) {
+          panel.hidden = true;
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.focus();
+        }
+      });
+    }());
 
     // EmailJS init
     emailjs.init("PihDcOwei2Nh1fjSQ");
