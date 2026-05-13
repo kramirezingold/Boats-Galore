@@ -107,11 +107,11 @@
     "steps": [
       {
         "title": "Assessment",
-        "description": "We assess your vehicle's condition and discuss what's needed."
+        "description": "We assess your vehicle's condition and maintenance schedules then discuss what's needed."
       },
       {
         "title": "Scheduling",
-        "description": "Work is scheduled and completed while your vehicle is in storage."
+        "description": "Work is scheduled and completed while your vehicle is here."
       },
       {
         "title": "Updates",
@@ -123,8 +123,8 @@
       }
     ],
     "main_price": "Contact for Quote",
-    "price_range": "Basic tune-ups from $50 — larger repairs quoted individually",
-    "best_for": "Minor mechanical issues or seasonal tune-ups between storage periods",
+    "price_range": "Basic tune-ups and maintenance from $95 — larger repairs quoted individually",
+    "best_for": "Minor mechanical issues or seasonal maintenance between storage periods",
     "what_to_expect": "Convenient — your vehicle gets serviced while it's already here"
   },
   "panel_wash": {
@@ -147,8 +147,8 @@
         "description": "Need something more specific? Additional cleaning and detailing services are available on request — just ask us what you need."
       }
     ],
-    "main_price": "Starting at $300",
-    "price_range": "Larger vessels: $400–$600",
+    "main_price": "Starting at $325",
+    "price_range": "Larger vessels: $400–$700",
     "best_for": "Storing a clean boat or picking one up ready for the water",
     "what_to_expect": "Drop it off dirty, get it back clean"
   }
