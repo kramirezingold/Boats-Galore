@@ -240,8 +240,12 @@
               <div class="sp-details">
                 <div class="sp-details__pricing">
                   <p class="sp-details__label">Pricing</p>
-                  <p class="sp-details__main-price">{{services.panel_wash.main_price}}</p>
-                  <p class="sp-details__range">{{services.panel_wash.price_range}}</p>
+                  <ul class="sp-details__price-list">
+                    <li><span class="sp-details__tier">{{services.panel_wash.rate_exterior_tier}}</span><span class="sp-details__amount">{{services.panel_wash.rate_exterior_amount}}</span></li>
+                    <li><span class="sp-details__tier">{{services.panel_wash.rate_interior_tier}}</span><span class="sp-details__amount">{{services.panel_wash.rate_interior_amount}}</span></li>
+                    <li><span class="sp-details__tier">{{services.panel_wash.rate_both_tier}}</span><span class="sp-details__amount">{{services.panel_wash.rate_both_amount}}</span></li>
+                  </ul>
+                  <p class="sp-details__tier-note">{{services.panel_wash.tier_note}}</p>
                 </div>
                 <div class="sp-details__meta">
                   <p><span class="sp-details__meta-label">Best for:</span> {{services.panel_wash.best_for}}</p>

@@ -150,8 +150,13 @@ collections:
                 fields:
                   - {label: Step Title, name: title, widget: string}
                   - {label: Step Description, name: description, widget: text}
-              - {label: Main Price, name: main_price, widget: string}
-              - {label: "Price Range / Note", name: price_range, widget: string}
+              - {label: "Rate — Exterior Wash Tier Name", name: rate_exterior_tier, widget: string}
+              - {label: "Rate — Exterior Wash Amount", name: rate_exterior_amount, widget: string, hint: "e.g. Starting at $75"}
+              - {label: "Rate — Interior Cleaning Tier Name", name: rate_interior_tier, widget: string}
+              - {label: "Rate — Interior Cleaning Amount", name: rate_interior_amount, widget: string, hint: "e.g. Starting at $60"}
+              - {label: "Rate — Exterior + Interior Tier Name", name: rate_both_tier, widget: string}
+              - {label: "Rate — Exterior + Interior Amount", name: rate_both_amount, widget: string, hint: "e.g. Starting at $120"}
+              - {label: Pricing Note, name: tier_note, widget: string, hint: "Shown below prices — e.g. size disclaimer"}
               - {label: Best For, name: best_for, widget: text}
               - {label: What to Expect, name: what_to_expect, widget: text}
 
