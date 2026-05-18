@@ -68,7 +68,7 @@
       },
       {
         "title": "Battery Disconnect and Reconnect",
-        "description": "Battery is safely disconnected and reconnected to preserve its charge."
+        "description": "Battery is safely disconnected in fall and reconnected in spring to preserve its charge."
       }
     ],
     "main_price": "Contact for Quote",
@@ -128,7 +128,9 @@
     "what_to_expect": "Convenient — your vehicle gets serviced while it's already here"
   },
   "panel_wash": {
-    "descriptor": "Before or After Storage · Storage Customers Only",
+    "rate_both_tier": "Exterior + Interior",
+    "what_to_expect": "Drop it off dirty, get it back clean",
+    "rate_exterior_tier": "Exterior Wash",
     "steps": [
       {
         "title": "Exterior Wash",
@@ -147,14 +149,12 @@
         "description": "Need something more specific? Additional cleaning and detailing services are available on request — just ask us what you need."
       }
     ],
-    "rate_exterior_tier": "Exterior Wash",
-    "rate_exterior_amount": "Contact for Quote",
-    "rate_interior_tier": "Interior Cleaning",
     "rate_interior_amount": "Contact for Quote",
-    "rate_both_tier": "Exterior + Interior",
-    "rate_both_amount": "Starting at $325",
-    "tier_note": "Prices vary depending on the size of your boat. Larger vessels: $400–$700.",
     "best_for": "Storing a clean boat or picking one up ready for the water",
-    "what_to_expect": "Drop it off dirty, get it back clean"
+    "tier_note": "Prices vary depending on the size of your boat. Larger vessels: $400–$700.",
+    "descriptor": "Before or After Storage · Storage Customers Only",
+    "rate_interior_tier": "Interior Cleaning",
+    "rate_both_amount": "Starting at $325",
+    "rate_exterior_amount": "Contact for Quote"
   }
 }
