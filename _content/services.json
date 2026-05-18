@@ -149,12 +149,12 @@
         "description": "Need something more specific? Additional cleaning and detailing services are available on request — just ask us what you need."
       }
     ],
-    "rate_interior_amount": "Contact for Quote",
+    "rate_interior_amount": "Starting at $325",
     "best_for": "Storing a clean boat or picking one up ready for the water",
     "tier_note": "Prices vary depending on the size of your boat. Larger vessels: $400–$700.",
     "descriptor": "Before or After Storage · Storage Customers Only",
     "rate_interior_tier": "Interior Cleaning",
-    "rate_both_amount": "Starting at $325",
-    "rate_exterior_amount": "Contact for Quote"
+    "rate_both_amount": "Starting at $495",
+    "rate_exterior_amount": "Starting at $175"
   }
 }
