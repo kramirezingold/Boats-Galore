@@ -12,7 +12,7 @@
       },
       {
         "title": "Intake",
-        "description": "We document your vehicle's condition and assign your storage area."
+        "description": "We document your vehicle's arrival and assign your storage area."
       },
       {
         "title": "Secure Storage",
@@ -54,7 +54,7 @@
     "what_to_expect": "An honest answer about whether we can help and what it costs"
   },
   "page_sub": "Seasonal storage, winterization, shrink wrap, cleaning, and more.",
-  "cta_sub": "Reach out today and we'll get back to you within 24 hours.",
+  "cta_sub": "Reach out today and we'll get back to you as quickly as we can.",
   "panel_winterize": {
     "descriptor": "Full Off-Season Prep · Storage Customers Only",
     "steps": [

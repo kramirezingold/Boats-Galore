@@ -23,7 +23,7 @@ function processTemplate(html, content) {
     return arr.map((item, i) => {
       return tmpl.replace(/\{\{([\w.]+)\}\}/g, (m, k) => {
         if (k === '__last__') return i === arr.length - 1 ? 'sp-step--last' : '';
-        const val = getVal(item, k);
+        const val = (item && typeof item === 'object') ? getVal(item, k) : item;
         return val != null ? escapeHtml(String(val)) : '';
       });
     }).join('');
