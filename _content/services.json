@@ -2,7 +2,7 @@
   "panel_storage": {
     "what_to_expect": "One flat rate covers the full season — no monthly billing, no surprises",
     "tier_note2": "Need storage outside the standard season? Call us — we're happy to work something out.",
-    "rate_medium_amount": "$499",
+    "rate_medium_amount": "$649",
     "rate_xl_amount": "Contact for Quote",
     "rate_large_tier": "Large",
     "steps": [
@@ -26,11 +26,11 @@
     "rate_medium_tier": "Medium",
     "best_for": "Anyone needing secure, worry-free off-season storage",
     "rate_xl_tier": "Extra Large",
-    "tier_note": "Small: Snowmobiles, ATVs, Jet Skis · Medium: Boats up to 20ft · Large: Boats 20–28ft · Extra Large: 28ft+ & RVs",
+    "tier_note": "Small: Snowmobiles, ATVs, Jet Skis · Medium: Boats 20-25ft · Large: Boats 25–30ft · Extra Large: 30ft+ & RVs",
     "descriptor": "September through May · Indoor Barn",
     "rate_small_amount": "$349",
     "rate_small_tier": "Small",
-    "rate_large_amount": "$649"
+    "rate_large_amount": "$749"
   },
   "cta_headline": "Ready to Get Started?",
   "panel_custom": {
