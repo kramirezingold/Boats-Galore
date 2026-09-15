@@ -7,8 +7,10 @@ Leslie Malin. They store boats, RVs, snowmobiles, ATVs, jet skis, trailers, and 
 vehicles. They do NOT store cars, fifth wheels, or anything easily damaged by indoor
 unheated storage.
 
-**Status: All four pages are built and deployed. The site is live at boats-galore.com
-via Vercel, auto-deploying from GitHub (kramirezingold/Boats-Galore).**
+**Status: All four pages are built and deployed to Vercel, auto-deploying from GitHub
+(kramirezingold/Boats-Galore). Domain boats-galore.com has NOT been purchased yet
+(as of 2026-09-15) — site is only reachable via its Vercel-assigned URL until the
+domain is bought and connected.**
 
 ---
 
@@ -18,7 +20,7 @@ via Vercel, auto-deploying from GitHub (kramirezingold/Boats-Galore).**
 - **Address:** 55235 Garrett Rd, Dowagiac, MI 49047
 - **Phone:** (269) 782-3090
 - **Email:** Lmalinmtl@gmail.com (displayed as text only — all contact routed through EmailJS)
-- **Domain:** boats-galore.com (Namecheap)
+- **Domain:** boats-galore.com — planned, NOT yet purchased (as of 2026-09-15). Will be bought via Namecheap and pointed at Vercel.
 - **Hosting:** Vercel — auto-deploys from GitHub main branch
 - **GitHub:** kramirezingold/Boats-Galore
 - **Access Hours:** 24/7
@@ -157,12 +159,9 @@ via Vercel, auto-deploying from GitHub (kramirezingold/Boats-Galore).**
 All images live in `/images/`. Current inventory:
 - `Hero_2.jpg` — home page hero background (in use)
 - `Hero_1.jpg` — spare hero photo (not currently used)
-- `Boat.jpg`, `rv.jpg`, `snowmobile.jpg`, `atv.jpg`, `jet ski.jpg`, `trailer.jpg`
+- `Boat.jpg`, `rv.jpg`, `snowmobile.jpg`, `atv.jpg`, `jet-ski.jpg`, `trailer.jpg`
   — real facility photos used in the "What We Store" carousel on index.html
 - `sister-lakes.avif` — original hero placeholder (no longer used)
-
-Note: `jet ski.jpg` has a space in the filename. It works but could be renamed
-to `jet-ski.jpg` before launch for cleanliness.
 
 ---
 
@@ -204,13 +203,14 @@ to `jet-ski.jpg` before launch for cleanliness.
 ---
 
 ## Before Launch Checklist
-- [ ] Confirm actual pricing with Mike and Leslie — replace all [TBD] in services.html
-- [ ] Rename `jet ski.jpg` → `jet-ski.jpg` and update src in index.html
+- [x] Confirm actual pricing with Mike and Leslie — replace all [TBD] in services.html
+- [x] Rename `jet ski.jpg` → `jet-ski.jpg` and update src in index.html
 - [ ] Set up Google Business listing (after site is live)
-- [ ] Verify EmailJS template variables match form field names exactly
-- [ ] Test contact form end-to-end — confirm email arrives at Lmalinmtl@gmail.com
+- [x] Verify EmailJS template variables match form field names exactly — field names in contact.html confirmed to match EmailJS template
+- [x] Test contact form end-to-end — confirm email arrives (owner confirmed EmailJS login/setup works)
 - [ ] Test on real mobile device (not just browser DevTools)
 - [ ] Submit sitemap to Google Search Console after launch
+- [ ] Purchase boats-galore.com domain (not yet bought as of 2026-09-15 — Vercel deploy is live but domain is not connected)
 
 ---
 
@@ -219,7 +219,9 @@ to `jet-ski.jpg` before launch for cleanliness.
 - Do not invent specific pricing numbers — use [TBD] placeholders
 - Do not invent testimonials or reviews — use the real 8 reviews already in index.html
 - Do not mention any connection to a landscaping business (the Malins ran one
-  previously — it should not appear on this site)
+  previously — it should not appear on this site). NOTE (2026-09-15): About page
+  story copy (_content/about.json, story_p1) already mentions it. Owner reviewed
+  and okayed leaving it as-is — this rule is knowingly overridden for that one line.
 - Do not add features that require a backend server
 - Do not use React or any JavaScript framework
 - Do not add unnecessary pages or features beyond the four defined above
