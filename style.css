@@ -2033,6 +2033,15 @@ footer {
   color: rgba(30, 42, 58, 0.38);
 }
 
+.form-hint {
+  font-size: 0.7rem;
+  color: var(--text-light);
+  opacity: 0.75;
+  font-style: italic;
+  line-height: 1.4;
+  margin: 0.3rem 0 0;
+}
+
 /* Date input — remove default browser chrome on some platforms */
 .form-group input[type="date"] {
   color: var(--text);
@@ -2135,6 +2144,15 @@ footer {
   height: 15px;
   flex-shrink: 0;
   cursor: pointer;
+}
+
+.services-dropdown__option input[type="checkbox"]:disabled {
+  cursor: not-allowed;
+}
+
+.services-dropdown__required {
+  font-size: 0.78rem;
+  color: var(--gold-dark);
 }
 
 .form-error {

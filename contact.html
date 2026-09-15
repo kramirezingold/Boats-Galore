@@ -194,6 +194,7 @@
               <div class="form-group">
                 <label for="vehicle_size">Vehicle Size / Length <span class="req" aria-hidden="true">*</span></label>
                 <input type="text" id="vehicle_size" name="vehicle_size" placeholder="e.g. 22 feet, or approximate dimensions" required />
+                <p class="form-hint">Measured from the furthest point forward to the furthest point back. If stored on a trailer longer than the vehicle, trailer length is what we measure.</p>
               </div>
               <div class="form-group">
                 <label for="dropoff_date">Drop-off Date (approximate) <span class="req" aria-hidden="true">*</span></label>
@@ -209,7 +210,7 @@
                   <span class="services-dropdown__arrow" aria-hidden="true">▾</span>
                 </button>
                 <div class="services-dropdown__panel" id="services-panel" hidden role="listbox" aria-multiselectable="true">
-                  <label class="services-dropdown__option"><input type="checkbox" value="Seasonal Storage" /> Seasonal Storage</label>
+                  <label class="services-dropdown__option"><input type="checkbox" value="Seasonal Storage" checked disabled /> Seasonal Storage <span class="services-dropdown__required">(required)</span></label>
                   <label class="services-dropdown__option"><input type="checkbox" value="Winterization" /> Winterization</label>
                   <label class="services-dropdown__option"><input type="checkbox" value="Cleaning &amp; Wash" /> Cleaning &amp; Wash</label>
                   <label class="services-dropdown__option"><input type="checkbox" value="Maintenance" /> Maintenance</label>
@@ -335,6 +336,7 @@
       });
 
       panel.addEventListener('change', updateLabel);
+      updateLabel();
 
       document.addEventListener('click', function (e) {
         if (!document.getElementById('services-dropdown').contains(e.target)) {

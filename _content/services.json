@@ -4,6 +4,7 @@
     "tier_note2": "Need storage outside the standard season? Call us — we're happy to work something out.",
     "main_price": "Contact for Quote",
     "price_range": "We charge for storage by the foot, or depending on the vehicle being stored.",
+    "measure_note": "Length is measured from the furthest point forward to the furthest point back. If a vehicle is stored on a trailer longer than the vehicle itself, trailer length is what we measure.",
     "steps": [
       {
         "title": "Drop-Off",
@@ -11,7 +12,7 @@
       },
       {
         "title": "Intake",
-        "description": "We document your vehicle's arrival and assign your storage area."
+        "description": "We confirm your vehicle's size, document its arrival, and assign your storage area."
       },
       {
         "title": "Secure Storage",
