@@ -72,7 +72,7 @@ if (!fs.existsSync('dist')) fs.mkdirSync('dist');
 });
 
 // Copy static assets
-for (const file of ['style.css', 'script.js', 'sitemap.xml', 'robots.txt']) {
+for (const file of ['style.css', 'script.js', 'sitemap.xml', 'robots.txt', 'favicon.svg']) {
   if (fs.existsSync(file)) {
     fs.copyFileSync(file, `dist/${file}`);
     console.log(`Copied: dist/${file}`);
