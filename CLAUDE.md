@@ -8,9 +8,10 @@ vehicles. They do NOT store cars, fifth wheels, or anything easily damaged by in
 unheated storage.
 
 **Status: All four pages are built and deployed to Vercel, auto-deploying from GitHub
-(kramirezingold/Boats-Galore). Domain boats-galore.com has NOT been purchased yet
-(as of 2026-09-15) — site is only reachable via its Vercel-assigned URL until the
-domain is bought and connected.**
+(kramirezingold/Boats-Galore). Domain boats-galore.com was purchased via Cloudflare
+Registrar and connected to Vercel as of 2026-09-17 — DNS is Cloudflare (DNS-only,
+gray cloud / not proxied), two CNAME records pointing root and www to Vercel. Site
+is live at boats-galore.com and www.boats-galore.com.**
 
 ---
 
@@ -20,7 +21,7 @@ domain is bought and connected.**
 - **Address:** 55235 Garrett Rd, Dowagiac, MI 49047
 - **Phone:** (269) 782-3090
 - **Email:** Lmalinmtl@gmail.com (displayed as text only — all contact routed through EmailJS)
-- **Domain:** boats-galore.com — planned, NOT yet purchased (as of 2026-09-15). Will be bought via Namecheap and pointed at Vercel.
+- **Domain:** boats-galore.com — purchased via Cloudflare Registrar and live as of 2026-09-17. DNS hosted on Cloudflare, DNS-only mode (not proxied), pointed at Vercel via two CNAME records (root + www).
 - **Hosting:** Vercel — auto-deploys from GitHub main branch
 - **GitHub:** kramirezingold/Boats-Galore
 - **Access Hours:** 24/7
@@ -73,8 +74,10 @@ domain is bought and connected.**
 - **Public Key:** PihDcOwei2Nh1fjSQ
 - **Service ID:** service_dybhya9
 - **Template ID:** template_gjtuwz8
-- **Form fields sent:** from_name, from_email, phone, what_to_store,
+- **Form fields sent:** from_name, from_email, phone, location, what_to_store,
   vehicle_size, dropoff_date, heard_from, message
+- `location` (Address or Lake You're On, required) added 2026-09-24 — confirm
+  it's mapped in the EmailJS dashboard template so it shows in received emails.
 - Do not change these IDs without updating the EmailJS dashboard to match.
 
 ---
@@ -206,11 +209,11 @@ All images live in `/images/`. Current inventory:
 - [x] Confirm actual pricing with Mike and Leslie — replace all [TBD] in services.html
 - [x] Rename `jet ski.jpg` → `jet-ski.jpg` and update src in index.html
 - [ ] Set up Google Business listing (after site is live)
-- [x] Verify EmailJS template variables match form field names exactly — field names in contact.html confirmed to match EmailJS template
-- [x] Test contact form end-to-end — confirm email arrives (owner confirmed EmailJS login/setup works)
+- [x] Verify EmailJS template variables match form field names exactly — `location` field added to contact.html and to EmailJS dashboard template 2026-09-24
+- [ ] Test contact form end-to-end — confirm email arrives (previously confirmed working, but not re-tested since `location` field was added 2026-09-24)
 - [ ] Test on real mobile device (not just browser DevTools)
-- [ ] Submit sitemap to Google Search Console after launch
-- [ ] Purchase boats-galore.com domain (not yet bought as of 2026-09-15 — Vercel deploy is live but domain is not connected)
+- [ ] Submit sitemap to Google Search Console after launch (use boats-galore.com, not Vercel URL)
+- [x] Purchase boats-galore.com domain — bought via Cloudflare Registrar, connected to Vercel, live as of 2026-09-17
 
 ---
 
